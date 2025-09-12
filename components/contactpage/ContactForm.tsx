@@ -1,37 +1,71 @@
-'use client'
-import React from 'react'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
-import RevealWrapper from '../animation/RevealWrapper'
+"use client";
+import React, { useState } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import RevealWrapper from "../animation/RevealWrapper";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState<boolean>(false);
 
   const initialValues = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  }
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required('Full Name is required'),
+    name: Yup.string().required("Full Name is required"),
     email: Yup.string()
-      .email('Invalid email address')
-      .required('Email is required'),
-    phone: Yup.string().matches(
-      /^\+?[1-9]\d{1,14}$/,
-      'Invalid phone number'
-    ),
+      .email("Invalid email address")
+      .required("Email is required"),
+    phone: Yup.string().matches(/^\+?[1-9]\d{1,14}$/, "Invalid phone number"),
     subject: Yup.string(),
-    message: Yup.string().required('Message is required'),
-  })
+    message: Yup.string().required("Message is required"),
+  });
 
-  const onSubmit = (values: any, { resetForm }: any) => {
-    console.log('Form Data Submitted:', values)
-    alert(`${values.name}, your message has been submitted!`)
-    resetForm()
-  }
+  const onSubmit = async (values: any, { resetForm }: any) => {
+    try {
+      setLoading(true);
+
+      const userFormData = {
+        replacements: [
+          { name: "USERNAME", replacement: values.name },
+          { name: "NAME", replacement: values.name },
+          { name: "EMAIL", replacement: values.email },
+          { name: "SUBJECT", replacement: values.subject },
+          { name: "MESSAGE", replacement: values.message },
+        ],
+        to: values.email,
+      };
+
+      const res = await axios.post(
+        "https://mail-sender.accurateweb.in/api/template/930c3d470c93484b/send",
+        userFormData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "mail-token":
+              "13dfca8c710e889ccf4db5cdc79cac874620f105b581d2ab57b70e30f4afe8b8",
+          },
+        }
+      );
+
+      if (res && res?.data) {
+        console.log("Form Data Submitted:", values);
+        toast.success("Message sent to admin!");
+        resetForm();
+      }
+    } catch (error) {
+      console.error("Error Submitting The Form:", error);
+      toast.error("❌ Failed to send your message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]">
@@ -41,7 +75,7 @@ const ContactForm = () => {
           validationSchema={validationSchema}
           onSubmit={onSubmit}
         >
-          {({ isSubmitting }) => (
+          {() => (
             <RevealWrapper
               as={Form}
               className="reveal-me mx-auto grid max-w-[800px] grid-cols-1 gap-[30px] md:grid-cols-2"
@@ -169,14 +203,18 @@ const ContactForm = () => {
               <div className="col-span-full sm:mt-14 md:mx-auto">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="rv-button rv-button-primary block w-full md:inline-block md:w-auto"
+                  disabled={loading}
+                  className={`rv-button rv-button-primary block w-full md:inline-block md:w-auto ${
+                    loading ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
                 >
                   <div className="rv-button-top">
-                    <span>Send Message</span>
+                    <span>{loading ? "Sending..." : "Send Message"}</span>
                   </div>
                   <div className="rv-button-bottom">
-                    <span className="text-nowrap">Send Message</span>
+                    <span className="text-nowrap">
+                      {loading ? "Sending..." : "Send Message"}
+                    </span>
                   </div>
                 </button>
               </div>
@@ -185,7 +223,7 @@ const ContactForm = () => {
         </Formik>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
