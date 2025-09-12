@@ -1,5 +1,5 @@
 ---
-image: '/images/products/product-aws.png'
+image: '/images/products/ProductOne.webp'
 alt: 'Amazon Web Services'
 category: 'Cloud & AI Solutions'
 title: 'Amazon Web Services'
@@ -24,7 +24,7 @@ Instead of managing isolated tools, organizations benefit from integrated enviro
 - **Global Reach** with multi-region availability and hybrid deployments.  
 - **Security & Governance** with compliance frameworks like HIPAA, GDPR, SOC.  
 
-![AWS Product Image](/images/product-details/product-aws-banner.png)
+![AWS Product Image](/images/products/ProductWideOne.webp)
 
 ### Who Is AWS Designed For?
 

@@ -1,5 +1,5 @@
 ---
-image: '/images/projects/project-1.png'
+image: '/images/projects/SquareOne.png'
 alt: 'Talk to Relational DB'
 category: 'Generative AI'
 title: 'Talk to Relational DB'

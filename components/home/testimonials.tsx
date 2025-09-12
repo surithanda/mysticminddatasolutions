@@ -1,6 +1,6 @@
 import reviewsData from "@/data/testimonials/testimonialV3.json";
-import testimonialLogoDark from "@/public/images/icons/testimonial-dark-logo.png";
-import testimonialLogo from "@/public/images/icons/testimonial-logo.png";
+import testimonialLogoDark from "@/public/images/logo/MysticMinds_Dark_Logo.png";
+import testimonialLogo from "@/public/images/logo/MysticMinds_Logo.png";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import RevealWrapper from "../animation/RevealWrapper";
@@ -91,11 +91,13 @@ const Testimonials = () => {
                         src={testimonialLogo}
                         alt="Logo"
                         className="inline dark:hidden"
+                        width={40}
                       />
                       <Image
                         src={testimonialLogoDark}
                         alt="Logo"
                         className="hidden dark:inline"
+                        width={40}
                       />
                     </div>
                     <span className="text-sm font-light leading-5 text-colorText">
@@ -178,11 +180,13 @@ const Testimonials = () => {
                         src={testimonialLogo}
                         alt="Logo"
                         className="inline dark:hidden"
+                        width={40}
                       />
                       <Image
                         src={testimonialLogoDark}
                         alt="Logo"
                         className="hidden dark:inline"
+                        width={40}
                       />
                     </div>
                     <span className="text-sm font-light leading-5 text-colorText">

@@ -30,16 +30,17 @@ const PolicyPage = () => {
         Let's chat!
         <CtaImageSlider
           slides={[
-            { id: "1", img: "/images/agent/01.jpg" },
-            { id: "3", img: "/images/agent/03.jpg" },
-            { id: "2", img: "/images/agent/04.png" },
+            { id: "1", img: "/images/home/One.jpg" },
+            { id: "2", img: "/images/home/Two.jpg" },
+            { id: "3", img: "/images/home/Three.jpg" },
           ]}
         />
         with us.
         <i className="block font-instrument italic max-md:inline-block max-sm:pl-2 sm:mt-10">
           A virtual coffee?
         </i>
-      </CTA>
+      </CTA>{" "}
+      ̵
     </LayoutTwo>
   );
 };

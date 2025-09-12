@@ -1,5 +1,5 @@
 ---
-image: '/images/projects/project-2.png'
+image: '/images/projects/SquareTwo.png'
 alt: 'Custom Company Search'
 category: 'AI-Powered Research'
 title: 'Custom Company Search'

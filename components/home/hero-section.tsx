@@ -170,27 +170,36 @@ const HeroSection = () => {
         ref={heroImage1Ref}
       >
         <img
-          src="/images/hero-img/hero-img-05.png"
+          src="/images/icons/hero-icons/Hero2.png"
           alt="hero"
           className="reveal-me"
+          width={400}
+          height={400}
         />
       </div>
       <div
         className="absolute -right-[5%] top-[12%] hidden md:block"
         ref={heroImage2Ref}
       >
-        <img src="/images/hero-img/hero-img-06.png" alt="hero" />
+        <img
+          src="/images/icons/hero-icons/Hero3.png"
+          alt="hero"
+          width={400}
+          height={400}
+        />
       </div>
-      <div
+      {/* <div
         className="absolute bottom-[0%] right-[18.5%] hidden lg:block"
         ref={heroImage3Ref}
       >
         <img
-          src="/images/hero-img/hero-img-07.png"
+          src="/images/icons/hero-icons/Hero1.png"
           alt="hero"
           className="reveal-me"
+          width={400}
+          height={400}
         />
-      </div>
+      </div> */}
     </section>
   );
 };

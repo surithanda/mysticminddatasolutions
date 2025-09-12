@@ -1,5 +1,5 @@
 ---
-image: '/images/projects/project-3.png'
+image: '/images/projects/SquareThree.png'
 alt: 'Data Quality Management'
 category: 'Data Solutions'
 title: 'Data Quality Management'

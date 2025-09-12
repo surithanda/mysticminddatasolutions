@@ -20,9 +20,9 @@ export default {
         instrument: ["'Instrument Serif', system-ui"],
       },
       colors: {
-        primary: '#12D8CC',
+        primary: '#FFD966',
         secondary: '#181818',
-        backgroundBody: '#EDF0F5',
+        backgroundBody: '#FDFCF7',
         black: '#181818',
         colorText: '#181818b3',
         dark: {

@@ -24,7 +24,8 @@ const ProductItems = () => {
               <img
                 src={item?.image}
                 alt={item?.alt}
-                className="h-full w-full object-cover transition-all duration-500 group-hover:rotate-3 group-hover:scale-125"
+                className="h-full w-full object-cover transition-all duration-500 group-hover:rotate-3 group-hover:scale-125 rounded-2xl"
+                width={250}
               />
             </figure>
             <div className="project-item-content">

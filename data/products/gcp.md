@@ -1,5 +1,5 @@
 ---
-image: '/images/products/product-gcp.png'
+image: '/images/products/ProductTwo.webp'
 alt: 'Google Cloud Platform'
 category: 'Cloud & AI Solutions'
 title: 'Google Cloud Platform'
@@ -24,7 +24,7 @@ Instead of juggling disconnected tools, organizations gain a seamless ecosystem 
 - **Modern BI** through Looker’s interactive dashboards and insights.  
 - **Cost-Efficient Scalability** with flexible pricing and serverless options.  
 
-![GCP Product Image](/images/product-details/product-gcp-banner.png)
+![GCP Product Image](/images/products/ProductWideThree.webp)
 
 ### Who Is GCP Designed For?
 

@@ -1,12 +1,12 @@
-import PageHero from '@/components/common/page-hero-section'
-import ContactForm from '@/components/contactpage/ContactForm'
-import CTA from '@/components/shared/CTA'
-import CtaImageSlider from '@/components/shared/CtaImageSlider'
-import LayoutTwo from '@/components/shared/LayoutTwo'
+import PageHero from "@/components/common/page-hero-section";
+import ContactForm from "@/components/contactpage/ContactForm";
+import CTA from "@/components/shared/CTA";
+import CtaImageSlider from "@/components/shared/CtaImageSlider";
+import LayoutTwo from "@/components/shared/LayoutTwo";
 
 export const metadata = {
-  title: 'Contact - Mystic Minds Solutions',
-}
+  title: "Contact - Mystic Minds Solutions",
+};
 
 const ContactPage = () => {
   return (
@@ -23,16 +23,19 @@ const ContactPage = () => {
         Let's chat!
         <CtaImageSlider
           slides={[
-            { id: '1', img: '/images/agent/01.jpg' },
-            { id: '2', img: '/images/agent/02.jpg' },
-            { id: '3', img: '/images/agent/03.jpg' },
+            { id: "1", img: "/images/home/One.jpg" },
+            { id: "2", img: "/images/home/Two.jpg" },
+            { id: "3", img: "/images/home/Three.jpg" },
           ]}
         />
         with us.
-        <i className="block font-instrument italic max-md:inline-block max-sm:pl-2 sm:mt-10">A virtual coffee?</i>
-      </CTA>
+        <i className="block font-instrument italic max-md:inline-block max-sm:pl-2 sm:mt-10">
+          A virtual coffee?
+        </i>
+      </CTA>{" "}
+      
     </LayoutTwo>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;

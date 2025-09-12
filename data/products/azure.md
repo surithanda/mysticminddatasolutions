@@ -1,5 +1,5 @@
 ---
-image: '/images/products/product-azure.png'
+image: '/images/products/ProductThree.webp'
 alt: 'Microsoft Azure Solutions'
 category: 'Cloud & AI Solutions'
 title: 'Microsoft Azure'
@@ -24,7 +24,7 @@ Instead of relying on fragmented tools, enterprises gain a single platform where
 - **Cost Optimization** through scalable infrastructure and pay-as-you-go pricing.  
 - **AI-Driven Innovation** with Azure ML and Cognitive Services.  
 
-![Azure Product Image](/images/product-details/product-azure-banner.png)
+![Azure Product Image](/images/products/ProductWideTwo.webp)
 
 ### Who Is Microsoft Azure Designed For?
 
