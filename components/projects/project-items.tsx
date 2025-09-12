@@ -24,7 +24,7 @@ const ProjectItems = () => {
               <img
                 src={project.image}
                 alt={project.alt}
-                className="h-full w-full object-cover transition-all duration-500 group-hover:rotate-3 group-hover:scale-125"
+                className="h-full w-full object-cover transition-all duration-500 group-hover:rotate-3 group-hover:scale-125 rounded-2xl"
               />
             </figure>
             <div className="project-item-content">

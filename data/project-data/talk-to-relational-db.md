@@ -1,5 +1,5 @@
 ---
-image: '/images/projects/SquareOne.png'
+image: '/images/projects/SqaureOne.png'
 alt: 'Talk to Relational DB'
 category: 'Generative AI'
 title: 'Talk to Relational DB'
@@ -17,7 +17,7 @@ Instead of relying on technical staff to write queries, users can now ask their 
 
 The power of this solution lies not only in speed but in its democratization of insights. By removing bottlenecks, businesses accelerate their decision-making processes and empower employees to act on data in real time. Departments that once relied on technical teams for basic queries can now operate independently, freeing up specialists to focus on innovation and complex analysis. This shift drives efficiency, collaboration, and agility across the organization.
 
-![Project images](/images/project-details/project-details-1-banner.png)
+![Project images](/images/projects/WideThree.png)
 
 ### Who Is Talk to Relational DB Designed For?
 

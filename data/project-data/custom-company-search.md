@@ -17,7 +17,7 @@ At the core of this solution is a powerful AI model that processes both structur
 
 Instead of spending hours combing through reports and websites, users can ask direct questions and receive concise, verified answers. Executives, analysts, and research teams can uncover competitor details, identify potential partners, or assess market opportunities in seconds. Python orchestrates the workflow behind the scenes, ensuring seamless data ingestion, processing, and presentation. This convergence of technologies transforms tedious research into a streamlined, strategic advantage.
 
-![Project images](/images/project-details/project-details-2-banner.png)
+![Project images](/images/projects/WideOne.jpg)
 
 ### Who Is Custom Company Search Designed For?
 

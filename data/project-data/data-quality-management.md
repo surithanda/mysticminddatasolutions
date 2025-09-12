@@ -17,7 +17,7 @@ Our approach integrates Data Bricks to manage pipelines for seamless ingestion a
 
 Reliable data translates into better decisions and measurable business outcomes. With our solution, organizations minimize risk by ensuring data integrity before it reaches analysts and decision-makers. Efficiency improves as teams spend less time cleaning data and more time extracting insights. Operational costs are reduced by automating processes that once required manual intervention, creating long-term value across the enterprise.
 
-![Project images](/images/project-details/project-details-3-banner.png)
+![Project images](/images/projects/WideTwo.jpg)
 
 ### Who Is Data Quality Management Designed For?
 

@@ -1,5 +1,4 @@
 'use client'
-import { Blog2Type } from '@/app/seo-blog/page'
 import topArrowDark from '@/public/images/icons/top-arrow-dark.svg'
 import topArrow from '@/public/images/icons/top-arrow.svg'
 import Image from 'next/image'
@@ -9,7 +8,7 @@ import RevealWrapper from '../animation/RevealWrapper'
 import Pagination from './Pagination'
 
 interface BlogsProps {
-  loadedBlogs: Blog2Type[]
+  loadedBlogs: any[]
 }
 
 const BlogItems: FC<BlogsProps> = ({ loadedBlogs }) => {
