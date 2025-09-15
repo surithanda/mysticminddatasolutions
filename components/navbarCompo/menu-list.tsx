@@ -198,7 +198,16 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
               <Link
                 href={item.url}
                 onClick={(e) => handleMenuItemClick(e, item)}
-                className="menu-list-item-text text-[28px] leading-[70px] text-white md:text-[42px] xl:text-[56px] xl:leading-[90px]"
+                className="menu-list-item-text text-white
+                  text-[18px] leading-[40px] 
+                  xs:text-[20px] xs:leading-[45px]
+                  sm:text-[24px] sm:leading-[50px] 
+                  md:text-[28px] md:leading-[55px]
+                  lg:text-[32px] lg:leading-[60px]
+                  xl:text-[36px] xl:leading-[65px]
+                  2xl:text-[42px] 2xl:leading-[75px]
+                  3xl:text-[48px] 3xl:leading-[85px]
+                  4xl:text-[56px] 4xl:leading-[90px]"
               >
                 {item.title}
               </Link>
@@ -206,7 +215,16 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
               <a
                 href={item.url}
                 onClick={(e) => handleMenuItemClick(e, item)}
-                className="menu-list-item-text text-[28px] leading-[70px] text-white md:text-[42px] xl:text-[56px] xl:leading-[90px]"
+                className="menu-list-item-text text-white cursor-pointer
+                  text-[18px] leading-[40px] 
+                  xs:text-[20px] xs:leading-[45px]
+                  sm:text-[24px] sm:leading-[50px] 
+                  md:text-[28px] md:leading-[55px]
+                  lg:text-[32px] lg:leading-[60px]
+                  xl:text-[36px] xl:leading-[65px]
+                  2xl:text-[42px] 2xl:leading-[75px]
+                  3xl:text-[48px] 3xl:leading-[85px]
+                  4xl:text-[56px] 4xl:leading-[90px]"
               >
                 {item.title}
               </a>
@@ -215,7 +233,14 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
             {item.items && (
               <ul
                 ref={(el) => setDropdownRef(el, item.title)}
-                className={`menu-list-item-dropdown relative left-0 h-fit max-h-[60vh] w-full gap-x-4 overflow-y-auto md:absolute md:left-[48%] md:max-h-none md:w-[350px] md:overflow-visible md:pb-0 lg:left-[33%] lg:w-[650px] xl:left-[44%] ${item.title === "Home" ? "!grid !grid-cols-1 lg:-mt-[70px] lg:!grid-cols-2" : "!grid !grid-cols-1 lg:top-5"} ${activeItems.includes(item.title) || (item.title === "Home" && pathname === "/" && initialLoad) ? "block" : "hidden"} `}
+                className={`menu-list-item-dropdown relative left-0 h-fit max-h-[60vh] w-full gap-x-4 overflow-y-auto 
+                  md:absolute md:left-[48%] md:max-h-none md:w-[280px] md:overflow-visible md:pb-0 
+                  lg:left-[35%] lg:w-[480px] 
+                  xl:left-[40%] xl:w-[520px]
+                  2xl:left-[42%] 2xl:w-[580px]
+                  3xl:left-[44%] 3xl:w-[650px]
+                  ${item.title === "Home" ? "!grid !grid-cols-1 lg:-mt-[50px] lg:!grid-cols-2 xl:-mt-[60px] 2xl:-mt-[70px]" : "!grid !grid-cols-1 lg:top-3 xl:top-4 2xl:top-5"} 
+                  ${activeItems.includes(item.title) || (item.title === "Home" && pathname === "/" && initialLoad) ? "block" : "hidden"}`}
               >
                 {item.items.map((subItem) => (
                   <li key={subItem.title}>
@@ -224,9 +249,17 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                       onClick={() => {
                         onItemClick && onItemClick();
                       }}
-                      className={`menu-list-item-dropdown-list inline-block pb-1 pl-3 text-base leading-8 text-white md:text-lg md:leading-[50px] ${
-                        isLinkActive(subItem.url) ? "active" : ""
-                      }`}
+                      className={`menu-list-item-dropdown-list inline-block pb-1 pl-3 text-white
+                        text-[12px] leading-[28px]
+                        xs:text-[13px] xs:leading-[30px]
+                        sm:text-[14px] sm:leading-[32px]
+                        md:text-[15px] md:leading-[36px]
+                        lg:text-[16px] lg:leading-[40px]
+                        xl:text-[17px] xl:leading-[44px]
+                        2xl:text-[18px] 2xl:leading-[48px]
+                        3xl:text-[19px] 3xl:leading-[50px]
+                        4xl:text-[20px] 4xl:leading-[52px]
+                        ${isLinkActive(subItem.url) ? "active" : ""}`}
                     >
                       {subItem.title.includes("-") ? (
                         <>

@@ -248,7 +248,16 @@ export default function Navbar() {
       >
         {/* Hyper-responsive backdrop blur layers */}
         <div
-          className={`pointer-events-none fixed top-0 z-[21] h-[100px] w-full transition duration-300 ease-linear will-change-transform xs:h-[120px] sm:h-[140px] md:h-[155px] lg:h-[155px] xl:h-[155px] 2xl:h-[165px] ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+          className={`pointer-events-none fixed top-0 z-[21] h-[80px] w-full transition duration-300 ease-linear will-change-transform 
+            xs:h-[90px] 
+            sm:h-[100px] 
+            md:h-[120px] 
+            lg:h-[130px] 
+            xl:h-[140px] 
+            2xl:h-[150px] 
+            3xl:h-[165px] 
+            4xl:h-[180px] 
+            ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
         >
           <div
             className="pointer-events-none absolute inset-0"
@@ -316,28 +325,56 @@ export default function Navbar() {
 
         {/* Main navigation with hyper-responsive design */}
         <nav
-          className={`fixed z-[1000] w-full px-2 pt-0.5 transition duration-300 ease-linear will-change-transform xs:px-3 xs:pt-1 sm:px-4 sm:pt-2 md:px-6 md:pt-3 lg:px-8 lg:pt-5 xl:px-10 xl:pt-6 2xl:px-12 2xl:pt-8 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+          className={`fixed z-[1000] w-full transition duration-300 ease-linear will-change-transform
+            px-2 pt-1 
+            xs:px-3 xs:pt-2 
+            sm:px-4 sm:pt-3 
+            md:px-6 md:pt-4 
+            lg:px-8 lg:pt-5 
+            xl:px-10 xl:pt-6 
+            2xl:px-12 2xl:pt-8 
+            3xl:px-16 3xl:pt-10
+            4xl:px-20 4xl:pt-12
+            ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
         >
           <div className="flex justify-between items-center">
             {/* Logo with hyper-responsive sizing */}
             <Link href="/" className="relative z-10 flex-shrink-0">
               <Image
-                className="inline-block h-8 w-auto dark:hidden xs:h-10 sm:h-12 md:h-14 lg:h-16 xl:h-[68px] 2xl:h-20 3xl:h-24"
+                className="inline-block dark:hidden
+                  h-6 w-auto
+                  xs:h-8
+                  sm:h-10
+                  md:h-12
+                  lg:h-14
+                  xl:h-16
+                  2xl:h-[68px]
+                  3xl:h-20
+                  4xl:h-24"
                 src={logo}
                 alt="logo"
                 width={136}
                 height={68}
                 priority
-                sizes="(max-width: 480px) 32px, (max-width: 640px) 40px, (max-width: 768px) 48px, (max-width: 1024px) 56px, (max-width: 1280px) 64px, (max-width: 1536px) 68px, (max-width: 1920px) 80px, 96px"
+                sizes="(max-width: 480px) 24px, (max-width: 640px) 32px, (max-width: 768px) 40px, (max-width: 1024px) 48px, (max-width: 1280px) 56px, (max-width: 1536px) 64px, (max-width: 1920px) 68px, (max-width: 2560px) 80px, 96px"
               />
               <Image
-                className="hidden h-8 w-auto dark:inline-block xs:h-10 sm:h-12 md:h-14 lg:h-16 xl:h-[68px] 2xl:h-20 3xl:h-24"
+                className="hidden dark:inline-block
+                  h-6 w-auto
+                  xs:h-8
+                  sm:h-10
+                  md:h-12
+                  lg:h-14
+                  xl:h-16
+                  2xl:h-[68px]
+                  3xl:h-20
+                  4xl:h-24"
                 src={logoDark}
                 alt="logo"
                 width={136}
                 height={68}
                 priority
-                sizes="(max-width: 480px) 32px, (max-width: 640px) 40px, (max-width: 768px) 48px, (max-width: 1024px) 56px, (max-width: 1280px) 64px, (max-width: 1536px) 68px, (max-width: 1920px) 80px, 96px"
+                sizes="(max-width: 480px) 24px, (max-width: 640px) 32px, (max-width: 768px) 40px, (max-width: 1024px) 48px, (max-width: 1280px) 56px, (max-width: 1536px) 64px, (max-width: 1920px) 68px, (max-width: 2560px) 80px, 96px"
               />
             </Link>
 
@@ -346,7 +383,16 @@ export default function Navbar() {
               <button
                 ref={openBtnRef}
                 onClick={openMenu}
-                className="menu-open relative h-8 w-8 cursor-pointer before:absolute before:left-1/2 before:top-[14px] before:h-0.5 before:w-4 before:-translate-x-1/2 before:bg-black before:transition-all before:duration-300 before:content-[''] after:absolute after:bottom-[14px] after:left-1/2 after:h-0.5 after:w-4 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 after:content-[''] hover:before:top-[12px] hover:after:bottom-[12px] dark:before:bg-white dark:after:bg-white xs:h-10 xs:w-10 xs:before:top-[18px] xs:before:w-5 xs:after:bottom-[18px] xs:after:w-5 xs:hover:before:top-[16px] xs:hover:after:bottom-[16px] sm:h-12 sm:w-12 sm:before:top-[22px] sm:before:w-6 sm:after:bottom-[22px] sm:after:w-6 sm:hover:before:top-[19px] sm:hover:after:bottom-[19px] md:h-14 md:w-14 md:before:top-[26px] md:before:w-7 md:after:bottom-[26px] md:after:w-7 md:hover:before:top-[23px] md:hover:after:bottom-[23px] lg:h-16 lg:w-16 lg:before:top-[30px] lg:before:w-8 lg:after:bottom-[30px] lg:after:w-8 lg:hover:before:top-[27px] lg:hover:after:bottom-[27px] xl:h-[68px] xl:w-[68px] xl:before:top-[32px] xl:before:w-9 xl:after:bottom-[32px] xl:after:w-9 xl:hover:before:top-[29px] xl:hover:after:bottom-[29px] 2xl:h-20 2xl:w-20 2xl:before:top-[38px] 2xl:before:w-10 2xl:after:bottom-[38px] 2xl:after:w-10 2xl:hover:before:top-[35px] 2xl:hover:after:bottom-[35px] 3xl:h-24 3xl:w-24 3xl:before:top-[46px] 3xl:before:w-12 3xl:after:bottom-[46px] 3xl:after:w-12 3xl:hover:before:top-[42px] 3xl:hover:after:bottom-[42px]"
+                className="menu-open relative cursor-pointer 
+                  h-6 w-6 before:absolute before:left-1/2 before:top-[10px] before:h-0.5 before:w-3 before:-translate-x-1/2 before:bg-black before:transition-all before:duration-300 before:content-[''] after:absolute after:bottom-[10px] after:left-1/2 after:h-0.5 after:w-3 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 after:content-[''] hover:before:top-[8px] hover:after:bottom-[8px] dark:before:bg-white dark:after:bg-white
+                  xs:h-8 xs:w-8 xs:before:top-[14px] xs:before:w-4 xs:after:bottom-[14px] xs:after:w-4 xs:hover:before:top-[12px] xs:hover:after:bottom-[12px]
+                  sm:h-10 sm:w-10 sm:before:top-[18px] sm:before:w-5 sm:after:bottom-[18px] sm:after:w-5 sm:hover:before:top-[16px] sm:hover:after:bottom-[16px]
+                  md:h-12 md:w-12 md:before:top-[22px] md:before:w-6 md:after:bottom-[22px] md:after:w-6 md:hover:before:top-[19px] md:hover:after:bottom-[19px]
+                  lg:h-14 lg:w-14 lg:before:top-[26px] lg:before:w-7 lg:after:bottom-[26px] lg:after:w-7 lg:hover:before:top-[23px] lg:hover:after:bottom-[23px]
+                  xl:h-16 xl:w-16 xl:before:top-[30px] xl:before:w-8 xl:after:bottom-[30px] xl:after:w-8 xl:hover:before:top-[27px] xl:hover:after:bottom-[27px]
+                  2xl:h-[68px] 2xl:w-[68px] 2xl:before:top-[32px] 2xl:before:w-9 2xl:after:bottom-[32px] 2xl:after:w-9 2xl:hover:before:top-[29px] 2xl:hover:after:bottom-[29px]
+                  3xl:h-20 3xl:w-20 3xl:before:top-[38px] 3xl:before:w-10 3xl:after:bottom-[38px] 3xl:after:w-10 3xl:hover:before:top-[35px] 3xl:hover:after:bottom-[35px]
+                  4xl:h-24 4xl:w-24 4xl:before:top-[46px] 4xl:before:w-12 4xl:after:bottom-[46px] 4xl:after:w-12 4xl:hover:before:top-[42px] 4xl:hover:after:bottom-[42px]"
                 aria-label="Open Menu"
               ></button>
             </div>
@@ -358,13 +404,30 @@ export default function Navbar() {
       <nav
         ref={menuRef}
         data-lenis-prevent="true"
-        className="menu fixed inset-0 z-[99999] min-h-screen w-full overflow-y-auto opacity-0 before:absolute before:top-0 before:w-[1px] before:bg-backgroundBody before:bg-opacity-10 before:content-none xs:right-4 sm:right-6 md:right-8 lg:right-10 xl:right-12 2xl:right-16 3xl:right-20 md:before:left-[45%] md:before:h-screen md:before:content-[''] lg:before:left-[38%] lg:before:h-[calc(100vh-87px)] xl:before:left-[42%] xl:before:h-[calc(100vh-94px)] 2xl:before:left-[45%] 2xl:before:h-[calc(100vh-110px)] 3xl:before:left-[48%] 3xl:before:h-[calc(100vh-130px)]"
+        className="menu fixed inset-0 z-[99999] min-h-screen w-full overflow-y-auto opacity-0 before:absolute before:top-0 before:w-[1px] before:bg-backgroundBody before:bg-opacity-10 before:content-none 
+          xs:right-4 
+          sm:right-6 
+          md:right-8 md:before:left-[45%] md:before:h-screen md:before:content-[''] 
+          lg:right-10 lg:before:left-[38%] lg:before:h-[calc(100vh-87px)] 
+          xl:right-12 xl:before:left-[42%] xl:before:h-[calc(100vh-94px)] 
+          2xl:right-16 2xl:before:left-[45%] 2xl:before:h-[calc(100vh-110px)] 
+          3xl:right-20 3xl:before:left-[48%] 3xl:before:h-[calc(100vh-130px)]
+          4xl:right-24 4xl:before:left-[50%] 4xl:before:h-[calc(100vh-150px)]"
       >
         {/* Close button with hyper-responsive positioning */}
         <button
           ref={closeBtnRef}
           onClick={closeMenu}
-          className="menu-close sticky left-[85%] top-4 h-6 w-6 cursor-pointer text-white xs:left-[88%] xs:top-5 xs:h-7 xs:w-7 sm:left-[90%] sm:top-6 sm:h-8 sm:w-8 md:left-[92%] md:top-8 md:h-9 md:w-9 lg:left-[93.5%] lg:top-10 lg:h-10 lg:w-10 xl:left-[95%] xl:top-12 xl:h-[40px] xl:w-[40px] 2xl:left-[96%] 2xl:top-14 2xl:h-12 2xl:w-12 3xl:left-[97%] 3xl:top-16 3xl:h-14 3xl:w-14"
+          className="menu-close sticky cursor-pointer text-white
+            left-[85%] top-3 h-5 w-5
+            xs:left-[88%] xs:top-4 xs:h-6 xs:w-6
+            sm:left-[90%] sm:top-5 sm:h-7 sm:w-7
+            md:left-[92%] md:top-6 md:h-8 md:w-8
+            lg:left-[93.5%] lg:top-8 lg:h-9 lg:w-9
+            xl:left-[95%] xl:top-10 xl:h-10 xl:w-10
+            2xl:left-[96%] 2xl:top-12 2xl:h-11 2xl:w-11
+            3xl:left-[97%] 3xl:top-14 3xl:h-12 3xl:w-12
+            4xl:left-[97.5%] 4xl:top-16 4xl:h-14 4xl:w-14"
           aria-label="Close Menu"
         >
           <svg
@@ -380,13 +443,40 @@ export default function Navbar() {
         </button>
 
         {/* Menu wrapper with hyper-responsive sizing */}
-        <div className="menu-wrapper relative z-[99999] mx-auto flex max-h-[90vh] max-w-[250px] flex-col gap-4 overflow-y-auto overflow-x-hidden px-4 pb-4 xs:max-w-[280px] xs:gap-5 xs:px-5 sm:max-w-[350px] sm:gap-6 sm:px-6 md:top-8 md:max-h-none md:max-w-[500px] md:gap-10 md:overflow-visible md:px-8 md:pt-0 lg:max-w-[700px] lg:gap-12 lg:px-10 xl:max-w-[900px] xl:gap-16 xl:px-12 2xl:top-6 2xl:max-w-[1100px] 2xl:gap-20 2xl:px-16 3xl:max-w-[1300px] 3xl:gap-24 3xl:px-20">
+        <div className="menu-wrapper relative z-[99999] mx-auto flex max-h-[90vh] flex-col overflow-y-auto overflow-x-hidden pb-4
+          max-w-[200px] gap-3 px-3
+          xs:max-w-[220px] xs:gap-4 xs:px-4
+          sm:max-w-[280px] sm:gap-5 sm:px-5
+          md:top-6 md:max-h-none md:max-w-[420px] md:gap-8 md:overflow-visible md:px-6 md:pt-0
+          lg:max-w-[560px] lg:gap-10 lg:px-8
+          xl:max-w-[720px] xl:gap-12 xl:px-10
+          2xl:top-4 2xl:max-w-[900px] 2xl:gap-16 2xl:px-12
+          3xl:max-w-[1100px] 3xl:gap-20 3xl:px-16
+          4xl:max-w-[1300px] 4xl:gap-24 4xl:px-20">
           <MenuList ref={menuItemsRef} onItemClick={closeMenu} />
         </div>
 
         {/* Menu footer with hyper-responsive design */}
-        <div className="menu-footer fixed bottom-0 w-full border-t border-white border-opacity-10 px-4 xs:px-5 sm:px-6 md:px-8 lg:block lg:px-10 xl:px-12 2xl:px-16 3xl:px-20 max-lg:hidden">
-          <div className="menu-footer-content mx-auto flex max-w-[250px] flex-col justify-between py-4 text-xs xs:max-w-[280px] xs:py-5 xs:text-sm sm:max-w-[350px] sm:py-6 md:max-w-[500px] md:flex-row md:py-7 lg:max-w-[700px] lg:py-8 lg:text-base xl:max-w-[900px] xl:py-9 2xl:max-w-[1100px] 2xl:py-10 2xl:text-lg 3xl:max-w-[1300px] 3xl:py-12 3xl:text-xl">
+        <div className="menu-footer fixed bottom-0 w-full border-t border-white border-opacity-10 max-lg:hidden lg:block
+          px-4 
+          xs:px-5 
+          sm:px-6 
+          md:px-8 
+          lg:px-10 
+          xl:px-12 
+          2xl:px-16 
+          3xl:px-20
+          4xl:px-24">
+          <div className="menu-footer-content mx-auto flex flex-col justify-between text-xs
+            max-w-[200px] py-3
+            xs:max-w-[220px] xs:py-4 xs:text-sm
+            sm:max-w-[280px] sm:py-5
+            md:max-w-[420px] md:flex-row md:py-6
+            lg:max-w-[560px] lg:py-7 lg:text-base
+            xl:max-w-[720px] xl:py-8
+            2xl:max-w-[900px] 2xl:py-9 2xl:text-lg
+            3xl:max-w-[1100px] 3xl:py-10 3xl:text-xl
+            4xl:max-w-[1300px] 4xl:py-12 4xl:text-2xl">
             <div className="mb-3 w-full text-white md:mb-0 md:w-auto">
               <div className="block md:hidden lg:hidden xl:block">
                 {/* Single line on mobile and XL+ */}
@@ -408,7 +498,15 @@ export default function Navbar() {
       {/* Menu overlay with consistent blur */}
       <div
         ref={menuOverflowRef}
-        className="menu-overflow pointer-events-none fixed inset-0 z-[9999] bg-[rgba(10,10,10,0.90)] backdrop-blur-[15px] xs:bg-[rgba(10,10,10,0.92)] xs:backdrop-blur-[18px] sm:bg-[rgba(10,10,10,0.94)] sm:backdrop-blur-[20px] md:bg-[rgba(10,10,10,0.95)] md:backdrop-blur-[25px] lg:backdrop-blur-[30px] xl:backdrop-blur-[35px] 2xl:backdrop-blur-[40px]"
+        className="menu-overflow pointer-events-none fixed inset-0 z-[9999] bg-[rgba(10,10,10,0.90)] backdrop-blur-[15px] 
+          xs:bg-[rgba(10,10,10,0.92)] xs:backdrop-blur-[18px] 
+          sm:bg-[rgba(10,10,10,0.94)] sm:backdrop-blur-[20px] 
+          md:bg-[rgba(10,10,10,0.95)] md:backdrop-blur-[25px] 
+          lg:backdrop-blur-[30px] 
+          xl:backdrop-blur-[35px] 
+          2xl:backdrop-blur-[40px]
+          3xl:backdrop-blur-[45px]
+          4xl:backdrop-blur-[50px]"
       ></div>
     </>
   );

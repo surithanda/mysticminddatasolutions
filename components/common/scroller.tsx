@@ -9,18 +9,18 @@ import { useRef } from 'react'
 gsap.registerPlugin(ScrollTrigger)
 
 const MARQUEE_IMAGES = [
-  { id: 1, src: '/images/marquee-img/hero-marquee-01.png' },
-  { id: 2, src: '/images/marquee-img/hero-marquee-02.png' },
-  { id: 3, src: '/images/marquee-img/hero-marquee-03.png' },
-  { id: 4, src: '/images/marquee-img/hero-marquee-04.png' },
-  { id: 5, src: '/images/marquee-img/hero-marquee-05.png' },
-  { id: 6, src: '/images/marquee-img/hero-marquee-06.png' },
-  { id: 7, src: '/images/marquee-img/hero-marquee-01.png' },
-  { id: 8, src: '/images/marquee-img/hero-marquee-02.png' },
-  { id: 9, src: '/images/marquee-img/hero-marquee-03.png' },
-  { id: 10, src: '/images/marquee-img/hero-marquee-04.png' },
-  { id: 11, src: '/images/marquee-img/hero-marquee-05.png' },
-  { id: 12, src: '/images/marquee-img/hero-marquee-06.png' },
+  { id: 1, src: '/images/about/about1.png' },
+  { id: 2, src: '/images/about/about2.png' },
+  { id: 3, src: '/images/about/about3.png' },
+  { id: 4, src: '/images/about/about4.png' }, 
+  { id: 5, src: '/images/about/about5.png' },
+  { id: 6, src: '/images/about/about3.png' },
+  { id: 7, src: '/images/about/about5.png' },
+  { id: 8, src: '/images/about/about1.png' },
+  { id: 9, src: '/images/about/about2.png' },
+  { id: 10, src: '/images/about/about3.png' },
+  { id: 11, src: '/images/about/about4.png' },
+  { id: 12, src: '/images/about/about5.png' },
 ]
 
 const AboutScroller = () => {
