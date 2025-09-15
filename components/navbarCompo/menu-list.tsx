@@ -32,10 +32,7 @@ const menuItems: MenuItemProps[] = [
       },
     ],
   },
-  {
-    title: "Blog",
-    url: "/blogs",
-  },
+
   {
     title: "Products",
     url: "/products",
@@ -43,6 +40,10 @@ const menuItems: MenuItemProps[] = [
   {
     title: "Projects",
     url: "/projects",
+  },
+  {
+    title: "Blog",
+    url: "/blogs",
   },
   {
     title: "Contact Us",
