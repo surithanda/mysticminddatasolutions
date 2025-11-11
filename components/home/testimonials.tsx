@@ -1,204 +1,117 @@
-import reviewsData from "@/data/testimonials/testimonialV3.json";
-import testimonialLogoDark from "@/public/images/logo/MysticMinds_Dark_Logo.png";
-import testimonialLogo from "@/public/images/logo/MysticMinds_Logo.png";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
-import RevealWrapper from "../animation/RevealWrapper";
-import TextAppearAnimation from "../animation/TextAppearAnimation";
+"use client";
 
+import { Cpu, Database, Search, CheckSquare, Cloud } from "lucide-react";
+import { ServiceCard } from "./service-card";
+import RevealWrapper from "../animations/RevealWrapper";
+
+/* -------------------------------------------------------------
+   Services data – unchanged
+   ------------------------------------------------------------- */
+const services = [
+  {
+    id: 1,
+    title: "AI for Business Optimization",
+    description:
+      "AI & ML solutions to optimise business operations and enhance customer experience.",
+    icon: Cpu,
+    color:
+      "bg-gradient-to-br from-blue-100 via-indigo-100 to-blue-200 text-blue-700",
+    // size is now calculated in the component – no need to store it here
+  },
+  {
+    id: 2,
+    title: "Generative AI Database Query",
+    description:
+      "Users can query relational databases using natural language, getting SQL or data results without technical knowledge.",
+    icon: Database,
+    color:
+      "bg-gradient-to-br from-green-100 via-emerald-100 to-green-200 text-green-700",
+  },
+  {
+    id: 3,
+    title: "Company Search Engine with LLMs",
+    description:
+      "Custom search engine using LLMs, RAG, ChromaDB, and Python for in-depth company research.",
+    icon: Search,
+    color:
+      "bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100 text-amber-700",
+  },
+  {
+    id: 4,
+    title: "AI in Data Quality Management",
+    description:
+      "Automating data checks, identifying issues, and suggesting remediation to maintain high data quality.",
+    icon: CheckSquare,
+    color:
+      "bg-gradient-to-br from-purple-100 via-violet-100 to-pink-100 text-purple-700",
+  },
+  {
+    id: 5,
+    title: "Cloud-Based Data & AI Solutions",
+    description:
+      "Designing scalable data solutions and architectures using cloud platforms (Azure, AWS, GCP) as part of their Data & AI offering.",
+    icon: Cloud,
+    color:
+      "bg-gradient-to-br from-rose-100 via-pink-100 to-rose-200 text-rose-700",
+  },
+];
+
+/* -------------------------------------------------------------
+   ServicesSection – ultra-responsive grid
+   ------------------------------------------------------------- */
 const Testimonials = () => {
   return (
-    <section className="overflow-hidden pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
-      <div className="container">
-        <div className="mb-10 text-center md:mb-20">
-          <RevealWrapper className="rv-badge reveal-me mb-3">
-            <span className="rv-badge-text">Testimonial</span>
-          </RevealWrapper>
-          <TextAppearAnimation>
-            <h2 className="text-appear">
-              What startups say <i className="font-instrument">about us</i>
-            </h2>
-          </TextAppearAnimation>
-        </div>
-      </div>
-      <div className="relative">
-        <div className="absolute left-0 top-0 z-40 h-full w-[25%] bg-gradient-to-r from-backgroundBody to-transparent dark:from-dark-gradient"></div>
-        <div className="absolute right-0 top-0 z-40 h-full w-[25%] bg-gradient-to-l from-backgroundBody to-transparent dark:from-dark-gradient"></div>
-        <RevealWrapper>
-          <Marquee speed={60}>
-            <div className="flex justify-center gap-6">
-              {reviewsData.map((review) => (
-                <div
-                  className="max-w-[388px] border p-5 first:ml-6 dark:border-backgroundBody/10 md:max-w-[408px]"
-                  key={review.id}
-                >
-                  <div className="flex items-center space-x-4 pb-4">
-                    <Image
-                      src={review.avatar}
-                      alt="Wade Warren"
-                      width={64}
-                      height={64}
-                      quality={100}
-                      className="h-16 w-16 rounded-full"
-                    />
-                    <div>
-                      <h3 className="text-[22px] leading-[28.8px] tracking-wide">
-                        {review.name}
-                      </h3>
-                      <p className="mt-[2px] text-[15px] font-light leading-6">
-                        {review.position}
-                      </p>
-                    </div>
-                  </div>
-                  <span className="block w-full">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="2"
-                      viewBox="0 0 362 2"
-                      fill="none"
-                      className="w-full"
-                    >
-                      <path
-                        className="stroke-secondary dark:stroke-backgroundBody"
-                        d="M0 0.785156H362"
-                        strokeOpacity="0.1"
-                        strokeDasharray="6 6"
-                      />
-                    </svg>
-                  </span>
-                  <blockquote className="py-4 text-base text-colorText dark:text-backgroundBody/70 md:text-xl md:leading-7 md:tracking-[0.4px]">
-                    {review.quote}
-                  </blockquote>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="2"
-                      viewBox="0 0 362 2"
-                      fill="none"
-                    >
-                      <path
-                        className="stroke-secondary dark:stroke-backgroundBody"
-                        d="M0 0.785156H362"
-                        strokeOpacity="0.1"
-                        strokeDasharray="6 6"
-                      />
-                    </svg>
-                  </div>
-
-                  <div className="flex items-center justify-between pt-4">
-                    <div className="flex items-center space-x-1">
-                      <Image
-                        src={testimonialLogo}
-                        alt="Logo"
-                        className="inline dark:hidden"
-                        width={40}
-                      />
-                      <Image
-                        src={testimonialLogoDark}
-                        alt="Logo"
-                        className="hidden dark:inline"
-                        width={40}
-                      />
-                    </div>
-                    <span className="text-sm font-light leading-5 text-colorText">
-                      {review.date}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Marquee>
+    <section className="overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+      {/* Header */}
+      <div className="text-center mb-12 md:mb-16 lg:mb-20">
+        <RevealWrapper className="rv-badge reveal-me mb-3">
+          <span className="rv-badge-text">Services</span>
         </RevealWrapper>
-      </div>
-      <RevealWrapper>
-        <div className="relative mt-[30px]">
-          <div className="absolute left-0 top-0 z-40 h-full w-[25%] bg-gradient-to-r from-backgroundBody to-transparent dark:from-dark-gradient"></div>
-          <div className="absolute right-0 top-0 z-40 h-full w-[25%] bg-gradient-to-l from-backgroundBody to-transparent dark:from-dark-gradient"></div>
-          <Marquee speed={60} direction="right">
-            <div className="flex justify-center gap-6">
-              {reviewsData.toReversed()?.map((review) => (
-                <div
-                  className="max-w-[388px] border p-5 first:ml-6 dark:border-backgroundBody/10 md:max-w-[408px]"
-                  key={review.id}
-                >
-                  <div className="flex items-center space-x-4 pb-4">
-                    <Image
-                      src={review.avatar}
-                      alt="Wade Warren"
-                      width={70}
-                      height={70}
-                      quality={100}
-                      className="h-16 w-16 rounded-full"
-                    />
-                    <div>
-                      <h3 className="text-[22px] leading-[28.8px] tracking-wide">
-                        {review.name}
-                      </h3>
-                      <p className="mt-[2px] text-[15px] font-light leading-6">
-                        {review.position}
-                      </p>
-                    </div>
-                  </div>
-                  <span className="block w-full">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="2"
-                      viewBox="0 0 362 2"
-                      fill="none"
-                      className="w-full"
-                    >
-                      <path
-                        className="stroke-secondary dark:stroke-backgroundBody"
-                        d="M0 0.785156H362"
-                        strokeOpacity="0.1"
-                        strokeDasharray="6 6"
-                      />
-                    </svg>
-                  </span>
-                  <blockquote className="py-4 text-base text-colorText dark:text-backgroundBody/70 md:text-xl md:leading-7 md:tracking-[0.4px]">
-                    {review.quote}
-                  </blockquote>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="2"
-                      viewBox="0 0 362 2"
-                      fill="none"
-                    >
-                      <path
-                        className="stroke-secondary dark:stroke-backgroundBody"
-                        d="M0 0.785156H362"
-                        strokeOpacity="0.1"
-                        strokeDasharray="6 6"
-                      />
-                    </svg>
-                  </div>
 
-                  <div className="flex items-center justify-between pt-4">
-                    <div className="flex items-center space-x-1">
-                      <Image
-                        src={testimonialLogo}
-                        alt="Logo"
-                        className="inline dark:hidden"
-                        width={40}
-                      />
-                      <Image
-                        src={testimonialLogoDark}
-                        alt="Logo"
-                        className="hidden dark:inline"
-                        width={40}
-                      />
-                    </div>
-                    <span className="text-sm font-light leading-5 text-colorText">
-                      {review.date}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Marquee>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-wider text-gray-900">
+          What startups say <i className="font-instrument">about us</i>
+        </h1>
+
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold italic text-violet-600">
+          AI capabilities
+        </h2>
+      </div>
+
+      {/* Grid – fully responsive */}
+      <div
+        className={`
+          grid gap-6
+          grid-cols-1
+          sm:grid-cols-2
+          md:grid-cols-3
+          lg:grid-cols-12   /* 12-column base for large screens */
+        `}
+      >
+        {/* Card 1 – span 2 cols on lg, full width on smaller */}
+        <div className="sm:col-span-2 md:col-span-3 lg:col-span-8">
+          <ServiceCard service={services[0]} index={0} total={services.length} />
         </div>
-      </RevealWrapper>
+
+        {/* Card 2 – same as Card 1 */}
+        <div className="sm:col-span-2 md:col-span-3 lg:col-span-4">
+          <ServiceCard service={services[1]} index={1} total={services.length} />
+        </div>
+
+        {/* Card 3 – span 1 col on lg, full width on smaller */}
+        <div className="sm:col-span-1 md:col-span-1 lg:col-span-4">
+          <ServiceCard service={services[2]} index={2} total={services.length} />
+        </div>
+
+        {/* Card 4 */}
+        <div className="sm:col-span-1 md:col-span-1 lg:col-span-4">
+          <ServiceCard service={services[3]} index={3} total={services.length} />
+        </div>
+
+        {/* Card 5 */}
+        <div className="sm:col-span-2 md:col-span-1 lg:col-span-4">
+          <ServiceCard service={services[4]} index={4} total={services.length} />
+        </div>
+      </div>
     </section>
   );
 };

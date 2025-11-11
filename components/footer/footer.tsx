@@ -1,25 +1,36 @@
-import footerData from '@/data/footer.json'
-import Image from 'next/image'
-import Link from 'next/link'
+import footerData from "@/data/footer.json";
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="w-full overflow-hidden">
-      <div className="bg-backgroundBody dark:bg-secondary">
-        <div className="flex justify-center items-center py-0">
-  <Image
-    src="/dotsicons.png"
-    alt="DATA + AI"
-    width={1600}
-    height={100}
-    className="w-[90%] h-auto mb-24"
-    priority
-  />
+     <div className="bg-backgroundBody dark:bg-secondary">
+  {/* Light mode image */}
+  <div className="flex justify-center items-center py-0 dark:hidden">
+    <Image
+      src="/dotsicons.png"
+      alt="DATA + AI"
+      width={1600}
+      height={100}
+      className="w-[90%] h-auto mb-24"
+      priority
+    />
+  </div>
+
+  {/* Dark mode image */}
+  <div className="hidden dark:flex justify-center items-center py-0">
+    <Image
+      src="/images/icons/hero-icons/darkai.jpg"
+      alt="DATA + AI"
+      width={1600}
+      height={100}
+      className="w-[90%] h-auto mb-24"
+      priority
+    />
+  </div>
 </div>
 
-
-
-      </div>
       <div className="-mt-10 bg-backgroundBody py-4 dark:bg-dark sm:-mt-[70px] md:-mt-24 xl:-mt-28">
         <div className="container">
           {/* Footer Content Grid */}
@@ -27,9 +38,11 @@ const Footer = () => {
             {/* Reach Us Section */}
             <div className="pr-8 max-lg:basis-full">
               <p className="mb-5 max-w-[360px]">
-                MysticMind Data Solutions offers AI, analytics, secure cloud solutions to drive business growth, efficiency.
-              </p>
-             
+  MysticMind Data Solutions — <br/> an AI and cloud analytics company 
+  driving business growth and efficiency.
+</p>
+
+
               <div className="mt-7 flex gap-6 md:mt-10">
                 <span>
                   <Link href="https://www.facebook.com/mysticmindds">
@@ -39,7 +52,8 @@ const Footer = () => {
                       height={23}
                       viewBox="0 0 20 20"
                       fill="none"
-                      className="stroke-[#565656] duration-200 hover:stroke-primary">
+                      className="stroke-[#565656] duration-200 hover:stroke-primary"
+                    >
                       <path
                         d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
                         strokeLinecap="round"
@@ -50,7 +64,11 @@ const Footer = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
-                      <path d="M7.5 11.25H12.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path
+                        d="M7.5 11.25H12.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </Link>
                 </span>
@@ -62,8 +80,13 @@ const Footer = () => {
                       width={23}
                       height={23}
                       viewBox="0 0 20 20"
-                      fill="none">
-                      <path d="M12.5 10L8.75 7.5V12.5L12.5 10Z" strokeLinecap="round" strokeLinejoin="round" />
+                      fill="none"
+                    >
+                      <path
+                        d="M12.5 10L8.75 7.5V12.5L12.5 10Z"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                       <path
                         d="M1.875 9.99998C1.875 12.3246 2.11517 13.6886 2.29774 14.3896C2.34654 14.581 2.44026 14.7581 2.57114 14.9061C2.70201 15.0541 2.86627 15.1688 3.0503 15.2407C5.66569 16.2457 10 16.2181 10 16.2181C10 16.2181 14.3343 16.2457 16.9497 15.2407C17.1337 15.1688 17.298 15.0541 17.4288 14.9061C17.5597 14.7581 17.6534 14.581 17.7022 14.3896C17.8848 13.6886 18.125 12.3246 18.125 9.99998C18.125 7.67533 17.8848 6.3114 17.7023 5.6104C17.6535 5.41894 17.5597 5.24188 17.4289 5.09386C17.298 4.94585 17.1337 4.83115 16.9497 4.75927C14.3343 3.75422 10 3.78181 10 3.78181C10 3.78181 5.66574 3.75422 3.05033 4.75926C2.86629 4.83114 2.70203 4.94584 2.57116 5.09385C2.44029 5.24186 2.34656 5.41893 2.29776 5.61038C2.11518 6.31138 1.875 7.67533 1.875 9.99998Z"
                         strokeLinecap="round"
@@ -80,7 +103,8 @@ const Footer = () => {
                       width={23}
                       height={23}
                       viewBox="0 0 20 20"
-                      fill="none">
+                      fill="none"
+                    >
                       <path
                         d="M10 13.125C11.7259 13.125 13.125 11.7259 13.125 10C13.125 8.27411 11.7259 6.875 10 6.875C8.27411 6.875 6.875 8.27411 6.875 10C6.875 11.7259 8.27411 13.125 10 13.125Z"
                         strokeMiterlimit={10}
@@ -105,7 +129,8 @@ const Footer = () => {
                       width={23}
                       height={23}
                       viewBox="0 0 20 20"
-                      fill="none">
+                      fill="none"
+                    >
                       <path
                         d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
                         strokeLinecap="round"
@@ -137,7 +162,8 @@ const Footer = () => {
                       width={23}
                       height={23}
                       viewBox="0 0 20 20"
-                      fill="none">
+                      fill="none"
+                    >
                       <path
                         d="M12.6562 12.6562C14.1233 12.6562 15.3125 11.467 15.3125 10C15.3125 8.53299 14.1233 7.34375 12.6562 7.34375C11.1892 7.34375 10 8.53299 10 10C10 11.467 11.1892 12.6562 12.6562 12.6562Z"
                         strokeLinecap="round"
@@ -174,7 +200,8 @@ const Footer = () => {
                       width={23}
                       height={23}
                       viewBox="0 0 20 20"
-                      fill="none">
+                      fill="none"
+                    >
                       <path
                         d="M7.5 12.1875C8.01777 12.1875 8.4375 11.7678 8.4375 11.25C8.4375 10.7322 8.01777 10.3125 7.5 10.3125C6.98223 10.3125 6.5625 10.7322 6.5625 11.25C6.5625 11.7678 6.98223 12.1875 7.5 12.1875Z"
                         fill="#565656"
@@ -242,14 +269,23 @@ const Footer = () => {
                       width={23}
                       height={23}
                       viewBox="0 0 20 20"
-                      fill="none">
+                      fill="none"
+                    >
                       <path
                         d="M16.25 3.125H3.75C3.40482 3.125 3.125 3.40482 3.125 3.75V16.25C3.125 16.5952 3.40482 16.875 3.75 16.875H16.25C16.5952 16.875 16.875 16.5952 16.875 16.25V3.75C16.875 3.40482 16.5952 3.125 16.25 3.125Z"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
-                      <path d="M9.375 8.75V13.75" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M6.875 8.75V13.75" strokeLinecap="round" strokeLinejoin="round" />
+                      <path
+                        d="M9.375 8.75V13.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M6.875 8.75V13.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                       <path
                         d="M9.375 10.9375C9.375 10.3573 9.60547 9.80094 10.0157 9.3907C10.4259 8.98047 10.9823 8.75 11.5625 8.75C12.1427 8.75 12.6991 8.98047 13.1093 9.3907C13.5195 9.80094 13.75 10.3573 13.75 10.9375V13.75"
                         strokeLinecap="round"
@@ -273,7 +309,8 @@ const Footer = () => {
                     <li key={href} className="md:mb-1">
                       <Link
                         href={href}
-                        className="block font-normal leading-9 tracking-[0.36px] transition-colors duration-300 hover:text-primary md:text-lg">
+                        className="block font-normal leading-9 tracking-[0.36px] transition-colors duration-300 hover:text-primary md:text-lg"
+                      >
                         {label}
                       </Link>
                     </li>
@@ -282,11 +319,13 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <p className="mt-10 border-t pt-5 text-center dark:border-dark">All rights Reserved MysticMinds</p>
+          <p className="mt-10 border-t pt-5 text-center dark:border-dark">
+            All rights Reserved MysticMinds
+          </p>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
