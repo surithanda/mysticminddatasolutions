@@ -1,5 +1,4 @@
 "use client";
-import { BlogType } from "@/app/blogs/page";
 import topArrowDark from "@/public/images/icons/top-arrow-dark.svg";
 import topArrow from "@/public/images/icons/top-arrow.svg";
 import Image from "next/image";
@@ -7,6 +6,7 @@ import Link from "next/link";
 import { FC, useState } from "react";
 import RevealWrapper from "../animation/RevealWrapper";
 import Pagination from "../common/pagination";
+import { BlogType } from "@/data/final-blogs-data/final-blogs-data";
 
 interface BlogsProps {
   Blogs: BlogType[];
@@ -39,7 +39,12 @@ const BlogsSection: FC<BlogsProps> = ({ Blogs }) => {
   };
 
   return (
-    <section className="pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]">
+    <section className="pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px] relative overflow-hidden lg:overflow-visible">
+       <img
+        src="/images/patterns/rotating.gif"
+        alt="logo-spinner"
+        className="pointer-events-none absolute -right-[56%] md:-right-[26%] top-52  w-[500px] md:w-[800px] opacity-50 z-40"
+      />
       <div className="container">
         <RevealWrapper className="grid grid-cols-1 items-center justify-items-center gap-x-6 gap-y-[60px] md:grid-cols-2 md:items-start xl:grid-cols-3">
           {currentPageData?.slice(0, 3)?.map((blog) => (

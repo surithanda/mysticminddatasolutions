@@ -1,10 +1,24 @@
-import Link from 'next/link'
-import RevealWrapper from '../animation/RevealWrapper'
-import TextAppearAnimation from '../animation/TextAppearAnimation'
+import Link from "next/link";
+import RevealWrapper from "../animation/RevealWrapper";
+import TextAppearAnimation from "../animation/TextAppearAnimation";
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative overflow-hidden pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
+    <section className="relative pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
+      {/* Top-left decorative image */}
+      <img
+        src="/images/patterns/rotating.gif"
+        alt="logo-spinner"
+        className="pointer-events-none absolute -left-[50%] xl:-left-[26%]   -top-48  w-[400px] md:w-[800px] opacity-50 z-40"
+      />
+
+      {/* Bottom-right decorative image */}
+      {/* <img
+        src="/images/decors/bottom-right.png"
+        alt=""
+        className="pointer-events-none absolute bottom-0 right-0 w-32 md:w-48 opacity-70"
+      /> */}
+
       <div className="container">
         <div className="mb-8 text-center md:mb-14">
           <TextAppearAnimation>
@@ -13,13 +27,17 @@ const WhyChooseUs = () => {
             </h2>
           </TextAppearAnimation>
           <TextAppearAnimation>
-            <p className="text-appear">The MysticMind Advantage — Data + AI That Works for You</p>
+            <p className="text-appear">
+              The MysticMind Advantage — Data + AI That Works for You
+            </p>
           </TextAppearAnimation>
         </div>
+
         <div className="flex flex-col-reverse gap-x-[30px] gap-y-8 md:flex-row">
+          {/* Left Text Column */}
           <div className="md:w-1/2 [&>*]:border-b">
             <RevealWrapper className="py-3.5 pr-[30px] lg:py-[30px]">
-              <h5>Expertise & Experience</h5>
+              <h5 className="z-50">Expertise & Experience</h5>
               <p className="tracking-[0.32px] mt-3 text-base leading-[1.6]">
                 Expert data and AI leaders with proven success.
               </p>
@@ -27,7 +45,8 @@ const WhyChooseUs = () => {
             <RevealWrapper className="py-3.5 pr-[30px] lg:py-[30px]">
               <h5>Tailored Solutions</h5>
               <p className="mt-3 text-base leading-[1.6] tracking-[0.32px]">
-                Every solution is tailored carefully to align with each business goal.
+                Every solution is tailored carefully to align with each business
+                goal.
               </p>
             </RevealWrapper>
             <RevealWrapper className="py-3.5 pr-[30px] lg:py-[30px]">
@@ -49,13 +68,23 @@ const WhyChooseUs = () => {
               </p>
             </RevealWrapper>
           </div>
-          <RevealWrapper as="figure" className="md:w-1/2">
-            <img src="/images/home/About.png" alt="Data & AI Solutions" className="h-full w-full rounded-3xl" />
+
+          {/* Right Image Column (no padding) */}
+          <RevealWrapper as="figure" className="md:w-1/2 p-0 m-0">
+            <img
+              src="/images/home/About.png"
+              alt="Data & AI Solutions"
+              className="h-full w-full rounded-3xl object-cover"
+            />
           </RevealWrapper>
         </div>
+
         <RevealWrapper as="ul" className="mt-14 flex justify-center">
           <li>
-            <Link href="/contact" className="rv-button rv-button-sm rv-button-primary">
+            <Link
+              href="/contact"
+              className="rv-button rv-button-sm rv-button-primary"
+            >
               <div className="rv-button-top">
                 <span>Let’s Talk</span>
               </div>
@@ -67,7 +96,7 @@ const WhyChooseUs = () => {
         </RevealWrapper>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default WhyChooseUs
+export default WhyChooseUs;

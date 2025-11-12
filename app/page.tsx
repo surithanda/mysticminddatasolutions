@@ -23,7 +23,7 @@ interface BlogsType {
   [key: string]: any;
 }
 
-const blogPosts: BlogsType[] = getMarkDownData("data/ai-solutions/blog");
+const blogPosts: any[] = getMarkDownData("data/ai-solutions/blog");
 
 const Home = () => {
   return (

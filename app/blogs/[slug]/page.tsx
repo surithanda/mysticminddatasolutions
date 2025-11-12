@@ -1,19 +1,9 @@
-import getMarkDownContent from "@/utils/GetMarkDownContent";
-import getMarkDownData from "@/utils/GetMarkDownData";
-import { BlogType } from "../page";
 import LayoutTwo from "@/components/shared/LayoutTwo";
 import PageHero from "@/components/common/page-hero-section";
 import CTA from "@/components/common/cta-section";
 import CtaImageSlider from "@/components/common/cta-image-slider";
 import BlogContent from "@/components/blogs/blogs-content";
-
-export async function generateStaticParams() {
-  const blogs: BlogType[] = getMarkDownData("data/blogs-data");
-
-  return blogs.map((post) => ({
-    slug: post.slug,
-  }));
-}
+import { loadedBlogs } from "@/data/final-blogs-data/final-blogs-data";
 
 export const metadata = {
   title: "Mystic Minds Insights",
@@ -27,8 +17,19 @@ const BlogDetails = async ({
   params: Promise<{ slug: string }>;
 }) => {
   const slug = (await params).slug;
-  const blog = getMarkDownContent("data/blogs-data/", slug);
-  const postBlog = blog.data;
+  const postBlog = loadedBlogs.find((item) => item.slug === slug);
+
+  if (!postBlog) {
+    return (
+      <LayoutTwo>
+        <PageHero
+          badgeTitle="Blog Not Found"
+          title="Oops!"
+          description="The requested blog could not be found."
+        />
+      </LayoutTwo>
+    );
+  }
 
   return (
     <LayoutTwo>
@@ -38,7 +39,7 @@ const BlogDetails = async ({
         description={postBlog.description}
         spacing="pt-32 md:pt-44 lg:pt-[200px] pb-10 md:pb-16 lg:pb-[88px] xl:pb-[100px] relative overflow-hidden"
       />
-      <BlogContent blog={blog} />
+      <BlogContent blog={postBlog} />
       <CTA>
         Let's chat!
         <CtaImageSlider
@@ -52,8 +53,7 @@ const BlogDetails = async ({
         <i className="block font-instrument italic max-md:inline-block max-sm:pl-2 sm:mt-10">
           A virtual coffee?
         </i>
-      </CTA>{" "}
-      ̵
+      </CTA>
     </LayoutTwo>
   );
 };

@@ -68,7 +68,12 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]">
+    <section className="pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px]  overflow-hidden lg:overflow-visible">
+      <img
+        src="/images/patterns/rotating.gif"
+        alt="logo-spinner"
+        className="pointer-events-none absolute -right-[60%] xl:-right-[26%] top-48  w-[500px] md:w-[800px] opacity-50 z-40"
+      />
       <div className="container">
         <Formik
           initialValues={initialValues}
@@ -147,26 +152,33 @@ const ContactForm = () => {
               </div>
 
               {/* Subject */}
-              <div className="md:col-span-full">
-                <label
-                  htmlFor="subject"
-                  className="text-2xl text-[#000000b3] dark:text-dark-100"
-                >
-                  Subject
-                </label>
-                <Field
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Enter subject"
-                  className="mt-3 w-full border bg-backgroundBody py-4 pl-5 text-xl text-colorText focus:border-primary focus:outline-none dark:border-dark dark:bg-dark"
-                />
-                <ErrorMessage
-                  name="subject"
-                  component="div"
-                  className="mt-1 text-sm text-red-500"
-                />
-              </div>
+             <div className="md:col-span-full">
+  <label
+    htmlFor="subject"
+    className="text-2xl text-[#000000b3] dark:text-dark-100"
+  >
+    Subject
+  </label>
+  <Field
+    as="select"
+    id="subject"
+    name="subject"
+    className="mt-3 w-full border bg-backgroundBody py-4 pl-5 text-xl text-colorText focus:border-primary focus:outline-none dark:border-dark dark:bg-dark"
+  >
+    
+    <option value="suggestions">Our Suggestions</option>
+    <option value="query">Query</option>
+    <option value="services">List of Services</option>
+    <option value="job-openings">Job Openings</option>
+    <option value="website">Website</option>
+  </Field>
+  <ErrorMessage
+    name="subject"
+    component="div"
+    className="mt-1 text-sm text-red-500"
+  />
+</div>
+
 
               {/* Message */}
               <div className="md:col-span-full">

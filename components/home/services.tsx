@@ -17,7 +17,7 @@ const sliceTwo = businessSolutionServices.slice(3, 6);
 
 const Services = () => {
   return (
-    <section className="pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
+    <section className="pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px] z-10">
       <div className="container">
         <div className="mb-16 flex flex-col items-start justify-center gap-x-10 gap-y-4 md:flex-row lg:mb-24 lg:justify-between">
           <div className="flex-1 md:self-start">

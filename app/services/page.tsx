@@ -18,7 +18,7 @@ const ServicesPage = () => {
         italicTitle=""
         scale
         description="Explore our innovative cutting-edge no-code websites designed to captivate and engage your visitors effortlessly"
-        spacing="max-md:pt-44 max-sm:pb-10 max-md:pb-16 md:py-44 lg:py-[200px] relative overflow-hidden"
+        spacing="pt-20 md:pt-44 max-sm:pb-10 max-md:pb-16 md:py-44 lg:py-[200px] relative overflow-hidden"
       />
       <ServicesSection />
       <Process />

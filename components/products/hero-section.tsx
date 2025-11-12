@@ -3,7 +3,12 @@ import RevealWrapper from '../animation/RevealWrapper';
 
 const HeroSection = () => {
   return (
-    <section className="overflow-hidden pb-14 pt-[130px] md:pb-16 md:pt-36 lg:pb-[88px] lg:pt-44 xl:pb-[100px] xl:pt-[180px]">
+    <section className=" pb-14 pt-[130px] md:pb-16 md:pt-36 lg:pb-[88px] lg:pt-44 xl:pb-[100px] xl:pt-[180px] relative overflow-hidden lg:overflow-visible">
+       <img
+        src="/images/patterns/rotating.gif"
+        alt="logo-spinner"
+        className="pointer-events-none absolute -right-[50%] md:-right-[26%] top-35  w-[500px] md:w-[800px] opacity-25 z-40"
+      />
       <RevealWrapper className="container">
        
         <h1 className="mt-5 text-center sm:mt-6 md:mt-9 xl:text-nowrap">

@@ -4,9 +4,9 @@ import Link from 'next/link'
 import RevealWrapper from '../animation/RevealWrapper'
 import TextAppearAnimation from '../animation/TextAppearAnimation'
 import BlogList from './BlogList'
+import { loadedBlogs } from '@/data/final-blogs-data/final-blogs-data'
 
 const BlogListV2 = () => {
-  const blogsData: MarkdownData[] = getMarkDownData('data/seo-agency/blog')
 
   return (
     <section className="overflow-hidden pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
@@ -27,7 +27,7 @@ const BlogListV2 = () => {
             </h2>
           </TextAppearAnimation>
         </div>
-        <BlogList blogData={blogsData} />
+        <BlogList blogData={loadedBlogs} />
         <RevealWrapper as="ul" className="mx-auto mt-[56px] flex list-none justify-center">
           <li className="mx-auto block w-[90%] text-center md:inline-block md:w-auto">
             <Link href="/seo-blog" className="rv-button rv-button-white block md:inline-block">

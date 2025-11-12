@@ -61,9 +61,16 @@ const AboutFaq: FC<PropsType> = ({ titleChange = false }) => {
   };
 
   return (
-    <section className="pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
+    <section className="pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px] relative overflow-hidden lg:overflow-visible">
+       <img
+        src="/images/patterns/rotating.gif"
+        alt="logo-spinner"
+        className="pointer-events-none absolute -left-[60%] xl:-left-[26%] -top-48  w-[500px] md:w-[800px] opacity-50 z-40"
+      />
       <div className="container">
+        
         <div className="mb-10 flex flex-col items-start justify-center gap-x-10 gap-y-4 md:mb-20 md:flex-row md:items-end lg:justify-between">
+        
           <SectionHeader
             headingTitle="Frequently Asked"
             titleChange={titleChange}
@@ -73,6 +80,7 @@ const AboutFaq: FC<PropsType> = ({ titleChange = false }) => {
         </div>
 
         <div className="mx-auto grid w-full grid-cols-1 items-start gap-7 md:grid-cols-2 lg:grid-cols-3">
+          
           {faqV2Data.map((faqArray, index) => (
             <RevealWrapper key={index} className="space-y-[30px]">
               {faqArray.map((faq) => (

@@ -20,7 +20,7 @@ const FAQ = ({ bigTitleWithBadge = false }: FaqProps) => {
 
   return (
     <section
-      className={`relative overflow-hidden pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px] ${bigTitleWithBadge ? 'pt-28 sm:pt-32 xl:pt-32' : 'pt-14 md:pt-16 lg:pt-[88px] xl:pt-[100px]'}`}>
+      className={`relative overflow-hidden pb-14 md:pb-16 lg:pb-[88px] xl:pb-[100px] -mt-[150px]`}>
       <div className="absolute left-1/2 top-1/2 -z-30 -translate-x-1/2 -translate-y-1/2 scale-x-[2.8] scale-y-[3.4] sm:scale-y-[1.6] md:scale-x-[1.9] md:scale-y-[1.5] lg:scale-x-[1.7] lg:scale-y-[1.5] xl:scale-y-[1.4] 2xl:scale-y-[1]">
         <Image src={gradientBg} alt="gradient-bg" />
       </div>

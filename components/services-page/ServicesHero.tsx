@@ -10,7 +10,7 @@ interface PropsType {
 
 const ServicesHero = ({ title, description, badgeTitle }: PropsType) => {
   return (
-    <section className="relative z-50 overflow-hidden pb-14 pt-28 md:pb-16 md:pt-[155px] lg:pb-[88px] lg:pt-[177px] xl:pb-[100px]">
+    <section className="relative z-50  pb-14 pt-28 md:pb-16 md:pt-[155px] lg:pb-[88px] lg:pt-[177px] xl:pb-[100px]">
       <HeroGradientAnimation />
       <div className="container">
         <div className="reveal-me text-center">

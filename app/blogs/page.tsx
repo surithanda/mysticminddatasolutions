@@ -3,6 +3,7 @@ import CtaImageSlider from "@/components/common/cta-image-slider";
 import CTA from "@/components/common/cta-section";
 import PageHero from "@/components/common/page-hero-section";
 import LayoutTwo from "@/components/shared/LayoutTwo";
+import { loadedBlogs } from "@/data/final-blogs-data/final-blogs-data";
 import getMarkDownData from "@/utils/GetMarkDownData";
 import React from "react";
 
@@ -12,13 +13,6 @@ export const metadata = {
     "Discover expert blogs from Mystic Minds on AI, data solutions, and digital transformation strategies.",
 };
 
-export interface BlogType {
-  slug: string;
-  content: string;
-  [key: string]: any;
-}
-
-const loadedBlogs: BlogType[] = getMarkDownData("data/blogs-data");
 
 const BlogsPage = () => {
   return (
@@ -30,7 +24,6 @@ const BlogsPage = () => {
         description="These alternatives can add a different tone or emphasis depending on how you want  to introduce your creative team. Let me know if you'd like any specific adjustments!"
       />
       <BlogsSection Blogs={loadedBlogs} />
-
       <CTA>
         Let's chat!
         <CtaImageSlider
@@ -44,7 +37,8 @@ const BlogsPage = () => {
         <i className="block font-instrument italic max-md:inline-block max-sm:pl-2 sm:mt-10">
           A virtual coffee?
         </i>
-      </CTA>{" "}̵
+      </CTA>{" "}
+      ̵
     </LayoutTwo>
   );
 };

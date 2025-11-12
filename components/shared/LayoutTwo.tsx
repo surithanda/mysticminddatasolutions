@@ -10,7 +10,7 @@ const LayoutTwo = ({
   return (
     <Fragment>
       <Navbar />
-      <main className="relative z-10 bg-backgroundBody dark:bg-secondary">{children}</main>
+      <main className="relative z-10 bg-backgroundBody dark:bg-secondary overflow-hidden lg:overflow-visible">{children}</main>
       <Footer />
     </Fragment>
   )

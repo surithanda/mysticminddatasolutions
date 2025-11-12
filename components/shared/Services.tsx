@@ -1,5 +1,6 @@
 import getMarkDownData from '@/utils/GetMarkDownData'
 import ServicesCard from './ServicesCard'
+import servicesData from '@/data/services'
 
 export interface servicesType {
   content: string
@@ -7,7 +8,6 @@ export interface servicesType {
   [key: string]: any
 }
 
-const servicesData: servicesType[] = getMarkDownData('data/services')
 
 const Services = () => {
   return <ServicesCard servicesData={servicesData} />

@@ -274,9 +274,9 @@ export default function Navbar() {
 
         <div className="menu-footer fixed bottom-0 w-full border-t border-white border-opacity-10 hidden lg:block px-10">
           <div className="menu-footer-content mx-auto flex justify-between text-base py-6 max-w-[900px]">
-            <p className="text-white">
+            {/* <p className="text-white">
               Mystic Minds, 8-2-120/86, Banjara Hills, Hyderabad, TS, 500034
-            </p>
+            </p> */}
             <SocialIcons />
           </div>
         </div>

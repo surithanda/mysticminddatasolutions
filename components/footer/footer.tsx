@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className="w-full overflow-hidden">
      <div className="bg-backgroundBody dark:bg-secondary">
   {/* Light mode image */}
-  <div className="flex justify-center items-center py-0 dark:hidden">
+  <div className="flex justify-center items-center py-0 dark:hidden ">
     <Image
-      src="/dotsicons.png"
+      src="/datayellow.png"
       alt="DATA + AI"
       width={1600}
       height={100}

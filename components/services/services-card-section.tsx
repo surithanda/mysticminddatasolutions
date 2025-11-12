@@ -9,7 +9,12 @@ import servicesData from "../../data/services";
 
 const ServicesSection = () => {
   return (
-    <section className="overflow-hidden pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
+    <section className=" pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px] relative">
+       <img
+        src="/images/patterns/rotating.gif"
+        alt="logo-spinner"
+        className="pointer-events-none absolute -right-[26%] -top-48  w-[500px] md:w-[800px] opacity-50 z-40"
+      />
       <div className="mb-8 text-center md:mb-16">
         <RevealWrapperV2 className="rv-badge reveal-me mb-3">
           <span className="rv-badge-text">Provided Services</span>

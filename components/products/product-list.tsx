@@ -12,7 +12,12 @@ let sortedProducts = products.toSorted((a, b) => a.year - b.year)
 
 const ProductItems = () => {
   return (
-    <section className="pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
+    <section className="pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px] relative">
+       <img
+        src="/images/patterns/rotating.gif"
+        alt="logo-spinner"
+        className="pointer-events-none absolute -left-[50%] md:-left-[16%] top-[30%]  w-[500px] md:w-[500px] opacity-25  -z-40 lg:z-40"
+      />
       <div className="container grid gap-20 max-md:gap-y-16 md:grid-cols-2 xl:gap-16">
         {sortedProducts?.map((item) => (
           <RevealWrapperV2
@@ -33,7 +38,7 @@ const ProductItems = () => {
                 {item?.category}
               </p>
               <div className="blog-title mb-2 mt-3 md:mt-4 lg:mb-4 lg:mt-5 xl:mt-7">
-                <h3 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[56px] lg:leading-[1.2] lg:tracking-[-1.68px]">
+                <h3 className="text-3xl text-start sm:text-4xl md:text-[40px] lg:text-[56px] lg:leading-[1.2] lg:tracking-[-1.68px]">
                   {item?.title}
                 </h3>
               </div>

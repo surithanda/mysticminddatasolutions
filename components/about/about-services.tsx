@@ -83,7 +83,7 @@ const AboutServices = () => {
   }
 
   return (
-    <section className="relative overflow-hidden pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
+    <section className="relative  pb-14 pt-14 md:pb-16 md:pt-16 lg:pb-[88px] lg:pt-[88px] xl:pb-[100px] xl:pt-[100px]">
       <div className="absolute left-1/2 top-[47%] -z-40 -translate-x-1/2 -translate-y-[45%] scale-x-[2.7] scale-y-[3.8] sm:scale-y-[3.3] md:scale-y-[3.2] lg:scale-y-[2.4] xl:scale-x-[2.4] xl:scale-y-[1.2]">
         <Image src={gradientBg} alt="gradient-bg" />
       </div>
@@ -98,6 +98,11 @@ const AboutServices = () => {
             </TextAppearAnimation>
           </div>
           <div className="flex-1 max-md:w-full md:self-end">
+             <img
+        src="/images/patterns/rotating.gif"
+        alt="logo-spinner"
+        className="pointer-events-none absolute -right-[50%] xl:-right-[26%] -top-48  w-[500px] md:w-[800px] opacity-50 z-20"
+      />
             <TextAppearAnimation>
               <p className="text-appear max-w-lg md:justify-self-end md:text-right">
                 At MysticMind Data Solutions, we offer a comprehensive suite of services
