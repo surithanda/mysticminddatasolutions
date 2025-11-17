@@ -14,7 +14,7 @@
       { "href": "/projects", "label": "Projects" },
       { "href": "/contact", "label": "Contact Us" },
       { "href": "/policy", "label": "Privacy Policy" },
-      { "href": "/terms", "label": "Terms & Conditions" },
+     
       { "href": "/faq", "label": "FAQ" }
     ]
   }

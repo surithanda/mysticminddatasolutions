@@ -5,43 +5,63 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="w-full overflow-hidden">
-     <div className="bg-backgroundBody dark:bg-secondary">
-  {/* Light mode image */}
-  <div className="flex justify-center items-center py-0 dark:hidden ">
-    <Image
-      src="/datayellow.png"
-      alt="DATA + AI"
-      width={1600}
-      height={100}
-      className="w-[90%] h-auto mb-24"
-      priority
-    />
-  </div>
+      <div className="bg-backgroundBody dark:bg-secondary">
+        {/* Light mode image */}
+        <div className="flex justify-center items-center py-0 dark:hidden ">
+          <Image
+            src="/datayellow.png"
+            alt="DATA + AI"
+            width={1600}
+            height={100}
+            className="w-[90%] h-auto"
+            priority
+          />
+        </div>
 
-  {/* Dark mode image */}
-  <div className="hidden dark:flex justify-center items-center py-0">
-    <Image
-      src="/images/icons/hero-icons/darkai.jpg"
-      alt="DATA + AI"
-      width={1600}
-      height={100}
-      className="w-[90%] h-auto mb-24"
-      priority
-    />
-  </div>
-</div>
+        {/* Dark mode image */}
+        <div className="hidden dark:flex justify-center items-center py-0">
+          <Image
+            src="/images/icons/hero-icons/darkai.jpg"
+            alt="DATA + AI"
+            width={1600}
+            height={100}
+            className="w-[90%] h-auto mb-24"
+            priority
+          />
+        </div>
+      </div>
+      <div className="flex justify-center mb-24 dark:bg-black bg-white">
+        <h2
+          className="text-center text-3xl font-bold  text-white px-6 py-3 rounded-full 
+                 bg-gradient-to-r from-teal-400 via-blue-500 to-red-400"
+        >
+          MysticMind Data Solutions
+        </h2>
+      </div>
 
-      <div className="-mt-10 bg-backgroundBody py-4 dark:bg-dark sm:-mt-[70px] md:-mt-24 xl:-mt-28">
+      <div className="mt-16 bg-backgroundBody py-4 dark:bg-dark sm:-mt-[70px] md:-mt-24 xl:-mt-28">
         <div className="container">
           {/* Footer Content Grid */}
           <div className="relative z-10 flex flex-col flex-wrap justify-center gap-y-10 pt-10 sm:flex-row sm:justify-between sm:gap-y-16 md:pt-20">
             {/* Reach Us Section */}
             <div className="pr-8 max-lg:basis-full">
-              <p className="mb-5 max-w-[360px]">
-  MysticMind Data Solutions — <br/> an AI and cloud analytics company 
-  driving business growth and efficiency.
-</p>
-
+              <Image
+                src="/images/logo/MysticMinds_Logo.png"
+                alt="DATA + AI"
+                width={70}
+                height={30}
+                // className="w-[90%] h-auto mb-24"
+                priority
+              />
+              <p className="mb-2 max-w-[360px]">
+                an AI and cloud analytics company driving business growth and
+                efficiency.
+              </p>
+              <br />
+              <p>
+                <span className="font-medium">email:</span>{" "}
+                info@mysticmindds.com
+              </p>
 
               <div className="mt-7 flex gap-6 md:mt-10">
                 <span>

@@ -9,8 +9,8 @@ const LayoutTwo = ({
 }>) => {
   return (
     <Fragment>
-      <Navbar />
-      <main className="relative z-10 bg-backgroundBody dark:bg-secondary overflow-hidden lg:overflow-visible">{children}</main>
+      <Navbar /> 
+      <main className="relative z-10 bg-backgroundBody dark:bg-secondary overflow-hidden ">{children}</main>
       <Footer />
     </Fragment>
   )
