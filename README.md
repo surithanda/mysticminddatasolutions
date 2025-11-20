@@ -1,0 +1,2 @@
+# mysticminddatasolutions
+Static website
