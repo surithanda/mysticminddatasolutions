@@ -153,7 +153,7 @@ export default function Navbar() {
   height={200}
   priority
   className="inline-block dark:hidden"
-  style={{ width: "150px", height: "auto" }}  // << forces bigger size
+  style={{ width: "90px", height: "auto" }}  // << forces bigger size
 />
 
              <Image
@@ -163,7 +163,7 @@ export default function Navbar() {
   height={200}
   priority
   className="hidden dark:inline-block"
-  style={{ width: "150px", height: "auto" }}
+  style={{ width: "90px", height: "auto" }}
 />
             </Link>
 

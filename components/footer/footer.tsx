@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="w-full overflow-hidden">
       <div className="bg-backgroundBody dark:bg-secondary">
         {/* Light mode image */}
-        <div className="flex justify-center items-center py-0 dark:hidden ">
+        {/* <div className="flex justify-center items-center py-0 dark:hidden ">
           <Image
             src="/google2.png"
             alt="DATA + AI"
@@ -16,10 +16,10 @@ const Footer = () => {
             className="w-full h-[500]"
             priority
           />
-        </div>
+        </div> */}
 
         {/* Dark mode image */}
-        <div className="hidden dark:flex justify-center items-center py-0">
+        <div className="hidden dark:flex justify-center items-center">
           <Image
             src="/images/icons/hero-icons/darkai.jpg"
             alt="DATA + AI"
