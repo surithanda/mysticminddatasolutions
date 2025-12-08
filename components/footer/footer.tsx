@@ -9,11 +9,11 @@ const Footer = () => {
         {/* Light mode image */}
         <div className="flex justify-center items-center py-0 dark:hidden ">
           <Image
-            src="/datayellow.png"
+            src="/google2.png"
             alt="DATA + AI"
-            width={1600}
+            width={160}
             height={100}
-            className="w-[90%] h-auto"
+            className="w-full h-[500]"
             priority
           />
         </div>

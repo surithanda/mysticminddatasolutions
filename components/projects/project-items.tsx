@@ -10,7 +10,7 @@ export interface ProjectsDataType {
 let projects: any[] = [
   {
     slug: "portfolio-redesign",
-    title: "Custom Comany Search",
+    title: "Custom Company Search",
     category: "AI POWERDED RESEARCH",
     // year: 2024,
     image: "/images/projects/SquareTwo.png",

@@ -7,7 +7,13 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 
 import { SocialIcons } from "@/components/navbarCompo/social-icons";
 import { MenuList } from "../navbarCompo/menu-list";
@@ -30,7 +36,8 @@ export default function Navbar() {
   /** Hide both menu & overlay initially */
   useLayoutEffect(() => {
     if (menuRef.current) menuRef.current.classList.add("hidden");
-    if (menuOverflowRef.current) menuOverflowRef.current.classList.add("hidden");
+    if (menuOverflowRef.current)
+      menuOverflowRef.current.classList.add("hidden");
   }, []);
 
   const openMenu = useCallback(() => {
@@ -107,16 +114,8 @@ export default function Navbar() {
       timelineRef.current
         .to(menuOverflowRef.current, { autoAlpha: 1, y: 0, scale: 1 }, 0)
         .to(menuRef.current, { autoAlpha: 1 }, 0)
-        .to(
-          menuItemsRef.current,
-          { autoAlpha: 1, y: 0, stagger: 0.2 },
-          0.2
-        )
-        .to(
-          closeBtnRef.current,
-          { autoAlpha: 1, y: 0 },
-          0.3
-        );
+        .to(menuItemsRef.current, { autoAlpha: 1, y: 0, stagger: 0.2 }, 0.2)
+        .to(closeBtnRef.current, { autoAlpha: 1, y: 0 }, 0.3);
     }
   }, []);
 
@@ -147,47 +146,106 @@ export default function Navbar() {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="relative z-10 flex-shrink-0">
-              <Image
-                className="inline-block dark:hidden h-12 sm:h-14 md:h-16"
-                src={logo}
-                alt="logo"
-                width={70}
-                height={120}
-                priority
-              />
-              <Image
-                className="hidden dark:inline-block h-12 sm:h-14 md:h-16"
-                src={logoDark}
-                alt="logo"
-                width={70}
-                height={120}
-                priority
-              />
+             <Image
+  src={logo}
+  alt="logo"
+  width={100}
+  height={200}
+  priority
+  className="inline-block dark:hidden"
+  style={{ width: "150px", height: "auto" }}  // << forces bigger size
+/>
+
+             <Image
+  src={logoDark}
+  alt="logo"
+  width={100}
+  height={200}
+  priority
+  className="hidden dark:inline-block"
+  style={{ width: "150px", height: "auto" }}
+/>
             </Link>
 
             {/* Desktop menu */}
             <div className="hidden lg:flex items-center gap-8 flex-1 justify-center">
-              <Link href="/" className="text-xl hover:text-blue-500">Home</Link>
-              <Link href="/about" className="text-xl hover:text-blue-500">About</Link>
+              <Link
+                href="/"
+                className={`text-xl hover:text-blue-500 ${pathname === "/" ? "text-blue-500" : ""}`}
+              >
+                Home
+              </Link>
+
+              <Link
+                href="/about"
+                className={`text-xl hover:text-blue-500 ${pathname === "/about" ? "text-blue-500" : ""}`}
+              >
+                About
+              </Link>
 
               <div className="relative group">
-                <Link href="#" className="text-xl flex items-center gap-1">
+                <Link
+                  href="#"
+                  className={`text-xl flex items-center gap-1 ${
+                    pathname.startsWith("/services") ||
+                    pathname.startsWith("/data-ai-integration-services")
+                      ? "text-blue-500"
+                      : ""
+                  }`}
+                >
                   Services
                 </Link>
+
                 <div className="absolute top-full left-0 mt-1 w-60 bg-white dark:bg-gray-800 border rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                  <Link href="/services" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <Link
+                    href="/services"
+                    className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      pathname === "/services" ? "text-blue-500" : ""
+                    }`}
+                  >
                     Main Services
                   </Link>
-                  <Link href="/data-ai-integration-services" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                  <Link
+                    href="/data-ai-integration-services"
+                    className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      pathname === "/data-ai-integration-services"
+                        ? "text-blue-500"
+                        : ""
+                    }`}
+                  >
                     Data & AI Integration Services
                   </Link>
                 </div>
               </div>
 
-              <Link href="/products" className="text-xl hover:text-blue-500">Products</Link>
-              <Link href="/projects" className="text-xl hover:text-blue-500">Projects</Link>
-              <Link href="/blogs" className="text-xl hover:text-blue-500">Blogs</Link>
-              <Link href="/contact" className="text-xl hover:text-blue-500">Contact</Link>
+              <Link
+                href="/products"
+                className={`text-xl hover:text-blue-500 ${pathname === "/products" ? "text-blue-500" : ""}`}
+              >
+                Products
+              </Link>
+
+              <Link
+                href="/projects"
+                className={`text-xl hover:text-blue-500 ${pathname === "/projects" ? "text-blue-500" : ""}`}
+              >
+                Projects
+              </Link>
+
+              <Link
+                href="/blogs"
+                className={`text-xl hover:text-blue-500 ${pathname === "/blogs" ? "text-blue-500" : ""}`}
+              >
+                Blogs
+              </Link>
+
+              <Link
+                href="/contact"
+                className={`text-xl hover:text-blue-500 ${pathname === "/contact" ? "text-blue-500" : ""}`}
+              >
+                Contact
+              </Link>
             </div>
 
             {/* Mobile menu button */}
