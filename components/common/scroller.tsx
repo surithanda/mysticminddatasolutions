@@ -9,18 +9,18 @@ import { useRef } from 'react'
 gsap.registerPlugin(ScrollTrigger)
 
 const MARQUEE_IMAGES = [
-  { id: 1, src: '/images/about/about1.png' },
-  { id: 2, src: '/images/about/about2.png' },
-  { id: 3, src: '/images/about/about3.png' },
-  { id: 4, src: '/images/about/about4.png' },
-  { id: 5, src: '/images/about/about5.png' },
-  { id: 6, src: '/images/about/about3.png' },
-  { id: 7, src: '/images/about/about5.png' },
-  { id: 8, src: '/images/about/about1.png' },
-  { id: 9, src: '/images/about/about2.png' },
-  { id: 10, src: '/images/about/about3.png' },
-  { id: 11, src: '/images/about/about4.png' },
-  { id: 12, src: '/images/about/about5.png' },
+  { id: 1, src: '/images/profiles/Profile1.webp' },
+  { id: 2, src: '/images/profiles/Profile2.webp' },
+  { id: 3, src: '/images/profiles/Profile3.webp' },
+  { id: 4, src: '/images/profiles/Profile4.webp' },
+  { id: 5, src: '/images/profiles/Profile5.webp' },
+  { id: 6, src: '/images/profiles/Profile3.webp' },
+  { id: 7, src: '/images/profiles/Profile5.webp' },
+  { id: 8, src: '/images/profiles/Profile1.webp' },
+  { id: 9, src: '/images/profiles/Profile2.webp' },
+  { id: 10, src: '/images/profiles/Profile3.webp' },
+  { id: 11, src: '/images/profiles/Profile4.webp' },
+  { id: 12, src: '/images/profiles/Profile5.webp' },
 ]
 
 const AboutScroller = () => {

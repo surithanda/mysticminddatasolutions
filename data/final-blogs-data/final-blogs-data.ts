@@ -7,8 +7,8 @@ export interface BlogType {
 export const loadedBlogs: BlogType[] = [
   {
     slug: "the-power-of-data-lakes",
-    thumbnail: "/images/blogs/Blog2.png",
-    featureImage: "/images/blogs/Blog2.png",
+    thumbnail: "/images/blogs/Blog1.png",
+    featureImage: "/images/blogs/Blog1.png",
     title: "The Power of Data Lakes",
     description:
       "Uncover how scalable data lakes are transforming analytics and storage in 2025.",
@@ -18,7 +18,7 @@ export const loadedBlogs: BlogType[] = [
   },
   {
     slug: "ai-driven-business-transformation",
-    thumbnail: "/images/blogs/blog-imgs/blog-square-one.png",
+    thumbnail: "/images/blogs/Blog1.png",
     featureImage: "/images/blogs/BlogAI.png",
     title: "AI-Driven Business Transformation",
     description:
@@ -29,8 +29,8 @@ export const loadedBlogs: BlogType[] = [
   },
   {
     slug: "cloud-computing-trends-2025",
-    thumbnail: "/images/blogs/Blog3.png",
-    featureImage: "/images/blogs/Blog3.png",
+    thumbnail: "/images/blogs/Blog1.png",
+    featureImage: "/images/blogs/Blog1.png",
     title: "Top Cloud Computing Trends in 2025",
     description:
       "Discover the latest cloud innovations shaping the future of digital infrastructure and enterprise solutions.",

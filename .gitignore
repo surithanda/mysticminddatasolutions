@@ -144,3 +144,7 @@ vite.config.ts.timestamp-*
 
 # Temporary test files
 .deployment-test
+
+# Large asset backups (excluded from deployment)
+assets-backup-large-files/
+assets-excluded/
