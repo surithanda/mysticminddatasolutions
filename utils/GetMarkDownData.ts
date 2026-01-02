@@ -17,13 +17,19 @@ const getMarkDownData = (folder: string) => {
     }
   })
 
-  // Custom order: azure -> gcp -> aws
+  // Custom order for cloud services: azure -> gcp -> aws
+  // Only apply custom sorting if folder contains these specific slugs
   const customOrder = ['azure', 'gcp', 'aws']
-  const sortedPosts = customOrder
-    .map((slug) => postsData.find((post) => post.slug === slug))
-    .filter(Boolean) // remove undefined if a file is missing
+  const hasCustomOrderSlugs = postsData.some(post => customOrder.includes(post.slug))
+  
+  if (hasCustomOrderSlugs) {
+    const sortedPosts = customOrder
+      .map((slug) => postsData.find((post) => post.slug === slug))
+      .filter(Boolean) // remove undefined if a file is missing
+    return sortedPosts
+  }
 
-  return sortedPosts
+  return postsData
 }
 
 export default getMarkDownData
