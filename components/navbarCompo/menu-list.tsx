@@ -265,7 +265,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                         2xl:text-[30px] 2xl:leading-[56px]
                         3xl:text-[32px] 3xl:leading-[60px]
                         4xl:text-[36px] 4xl:leading-[64px]
-                        ${isLinkActive(subItem.url) ? "active !text-primary !font-bold" : ""}
+                        ${isLinkActive(subItem.url) ? "active !text-primary !font-bold" : ""}`}
                     >
                       {subItem.title.includes("-") ? (
                         <>
