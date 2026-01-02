@@ -99,6 +99,3 @@ This project is configured for deployment on Azure Static Web Apps via GitHub Ac
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Azure Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/)
 
-## License
-
-See LICENSE file for details.
