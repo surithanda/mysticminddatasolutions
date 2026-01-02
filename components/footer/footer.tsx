@@ -5,8 +5,8 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="w-full overflow-hidden">
-      <div className="bg-backgroundBody dark:bg-secondary">
-        {/* Light mode image */}
+      {/* Temporarily commented out - will replace with Azure architecture images later */}
+      {/* <div className="bg-backgroundBody dark:bg-secondary">
         <div className="flex justify-center items-center py-0 dark:hidden ">
           <Image
             src="/datayellow.png"
@@ -18,7 +18,6 @@ const Footer = () => {
           />
         </div>
 
-        {/* Dark mode image */}
         <div className="hidden dark:flex justify-center items-center py-0">
           <Image
             src="/images/icons/hero-icons/darkai.jpg"
@@ -29,7 +28,7 @@ const Footer = () => {
             priority
           />
         </div>
-      </div>
+      </div> */}
       <div className="flex justify-center mb-24 dark:bg-black bg-[#FDFCF7]">
         <h2
           className="text-center text-3xl font-bold  text-white px-6 py-3 rounded-full 
