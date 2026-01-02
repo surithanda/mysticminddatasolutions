@@ -11,6 +11,12 @@ export const metadata = {
     "Discover expert blogs from Mystic Minds on AI, data solutions, and digital transformation strategies.",
 };
 
+export async function generateStaticParams() {
+  return loadedBlogs.map((blog) => ({
+    slug: blog.slug,
+  }));
+}
+
 const BlogDetails = async ({
   params,
 }: {
