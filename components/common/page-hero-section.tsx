@@ -1,5 +1,5 @@
 import RevealWrapper from "../animation/RevealWrapper";
-import HeroGradientAnimation from "../animations/hero-gradient";
+import HeroGradientAnimation from "../shared/HeroGradientAnimation";
 
 interface PropsType {
   badgeTitle?: string;

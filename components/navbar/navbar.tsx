@@ -170,7 +170,7 @@ export default function Navbar() {
               <Link 
                 href="/" 
                 className={`text-xl hover:text-blue-500 transition-colors ${
-                  pathname === "/" ? "text-primary font-bold" : ""
+                  pathname === "/" ? "text-blue-600 font-bold" : ""
                 }`}
               >
                 Home
@@ -178,7 +178,7 @@ export default function Navbar() {
               <Link 
                 href="/about" 
                 className={`text-xl hover:text-blue-500 transition-colors ${
-                  pathname === "/about" ? "text-primary font-bold" : ""
+                  pathname === "/about" ? "text-blue-600 font-bold" : ""
                 }`}
               >
                 About
@@ -189,7 +189,7 @@ export default function Navbar() {
                   href="#" 
                   className={`text-xl flex items-center gap-1 ${
                     pathname.startsWith("/services") || pathname.startsWith("/data-ai-integration-services") 
-                      ? "text-primary font-bold" 
+                      ? "text-blue-600 font-bold" 
                       : ""
                   }`}
                 >
@@ -199,7 +199,7 @@ export default function Navbar() {
                   <Link 
                     href="/services" 
                     className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                      pathname === "/services" ? "bg-gray-100 dark:bg-gray-700 font-bold text-primary" : ""
+                      pathname === "/services" ? "bg-gray-100 dark:bg-gray-700 font-bold text-blue-600" : ""
                     }`}
                   >
                     Main Services
@@ -207,7 +207,7 @@ export default function Navbar() {
                   <Link 
                     href="/data-ai-integration-services" 
                     className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                      pathname === "/data-ai-integration-services" ? "bg-gray-100 dark:bg-gray-700 font-bold text-primary" : ""
+                      pathname === "/data-ai-integration-services" ? "bg-gray-100 dark:bg-gray-700 font-bold text-blue-600" : ""
                     }`}
                   >
                     Data & AI Integration Services
@@ -218,7 +218,7 @@ export default function Navbar() {
               <Link 
                 href="/products" 
                 className={`text-xl hover:text-blue-500 transition-colors ${
-                  pathname.startsWith("/products") ? "text-primary font-bold" : ""
+                  pathname.startsWith("/products") ? "text-blue-600 font-bold" : ""
                 }`}
               >
                 Products
@@ -226,7 +226,7 @@ export default function Navbar() {
               <Link 
                 href="/projects" 
                 className={`text-xl hover:text-blue-500 transition-colors ${
-                  pathname.startsWith("/projects") ? "text-primary font-bold" : ""
+                  pathname.startsWith("/projects") ? "text-blue-600 font-bold" : ""
                 }`}
               >
                 Projects
@@ -234,7 +234,7 @@ export default function Navbar() {
               <Link 
                 href="/blogs" 
                 className={`text-xl hover:text-blue-500 transition-colors ${
-                  pathname.startsWith("/blogs") ? "text-primary font-bold" : ""
+                  pathname.startsWith("/blogs") ? "text-blue-600 font-bold" : ""
                 }`}
               >
                 Blogs
@@ -242,7 +242,7 @@ export default function Navbar() {
               <Link 
                 href="/contact" 
                 className={`text-xl hover:text-blue-500 transition-colors ${
-                  pathname === "/contact" ? "text-primary font-bold" : ""
+                  pathname === "/contact" ? "text-blue-600 font-bold" : ""
                 }`}
               >
                 Contact

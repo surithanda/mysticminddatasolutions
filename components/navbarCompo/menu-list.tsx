@@ -212,7 +212,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                   2xl:text-[42px] 2xl:leading-[75px]
                   3xl:text-[48px] 3xl:leading-[85px]
                   4xl:text-[56px] 4xl:leading-[90px]
-                  ${isLinkActive(item.url) ? "!text-primary font-bold" : ""}`}
+                  ${isLinkActive(item.url) ? "!text-blue-600 font-bold" : ""}`}
               >
                 {item.title}
               </Link>
@@ -230,7 +230,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                   2xl:text-[42px] 2xl:leading-[75px]
                   3xl:text-[48px] 3xl:leading-[85px]
                   4xl:text-[56px] 4xl:leading-[90px]
-                  ${activeItems.includes(item.title) ? "!text-primary font-bold" : ""}`}
+                  ${activeItems.includes(item.title) ? "!text-blue-600 font-bold" : ""}`}
               >
                 {item.title}
               </a>
@@ -265,7 +265,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                         2xl:text-[30px] 2xl:leading-[56px]
                         3xl:text-[32px] 3xl:leading-[60px]
                         4xl:text-[36px] 4xl:leading-[64px]
-                        ${isLinkActive(subItem.url) ? "active !text-primary !font-bold" : ""}`}
+                        ${isLinkActive(subItem.url) ? "active !text-blue-600 !font-bold" : ""}`}
                     >
                       {subItem.title.includes("-") ? (
                         <>

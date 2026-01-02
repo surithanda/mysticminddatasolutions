@@ -2,7 +2,7 @@
 
 import { Cpu, Database, Search, CheckSquare, Cloud } from "lucide-react";
 import { ServiceCard } from "./service-card";
-import RevealWrapper from "../animations/RevealWrapper";
+import RevealWrapper from "../animation/RevealWrapper";
 
 /* -------------------------------------------------------------
    Services data – unchanged
