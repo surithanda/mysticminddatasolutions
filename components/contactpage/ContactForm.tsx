@@ -1,10 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import RevealWrapper from "../animation/RevealWrapper";
 import axios from "axios";
 import toast from "react-hot-toast";
+
+interface FormValues {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
 
 const ContactForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -27,7 +35,7 @@ const ContactForm = () => {
     message: Yup.string().required("Message is required"),
   });
 
-  const onSubmit = async (values: any, { resetForm }: any) => {
+  const onSubmit = async (values: FormValues, { resetForm }: FormikHelpers<FormValues>) => {
     try {
       setLoading(true);
 
@@ -48,19 +56,16 @@ const ContactForm = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            "mail-token":
-              "13dfca8c710e889ccf4db5cdc79cac874620f105b581d2ab57b70e30f4afe8b8",
+            "mail-token": process.env.NEXT_PUBLIC_MAIL_TOKEN || "",
           },
         }
       );
 
       if (res && res?.data) {
-        console.log("Form Data Submitted:", values);
         toast.success("Message sent to admin!");
         resetForm();
       }
     } catch (error) {
-      console.error("Error Submitting The Form:", error);
       toast.error("❌ Failed to send your message. Please try again later.");
     } finally {
       setLoading(false);

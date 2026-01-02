@@ -5,30 +5,6 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="w-full overflow-hidden">
-      {/* Temporarily commented out - will replace with Azure architecture images later */}
-      {/* <div className="bg-backgroundBody dark:bg-secondary">
-        <div className="flex justify-center items-center py-0 dark:hidden ">
-          <Image
-            src="/datayellow.png"
-            alt="DATA + AI"
-            width={1600}
-            height={100}
-            className="w-[90%] h-auto"
-            priority
-          />
-        </div>
-
-        <div className="hidden dark:flex justify-center items-center py-0">
-          <Image
-            src="/images/icons/hero-icons/darkai.jpg"
-            alt="DATA + AI"
-            width={1600}
-            height={100}
-            className="w-[90%] h-auto mb-24"
-            priority
-          />
-        </div>
-      </div> */}
       <div className="flex justify-center mb-24 dark:bg-black bg-[#FDFCF7]">
         <h2
           className="text-center text-3xl font-bold  text-white px-6 py-3 rounded-full 
@@ -46,10 +22,9 @@ const Footer = () => {
             <div className="pr-8 max-lg:basis-full">
               <Image
                 src="/images/logo/MysticMinds_Logo.png"
-                alt="DATA + AI"
+                alt="MysticMind Logo"
                 width={70}
                 height={30}
-                // className="w-[90%] h-auto mb-24"
                 priority
               />
               <p className="mb-2 max-w-[360px]">

@@ -1,18 +1,21 @@
-import getMarkDownData from "@/utils/GetMarkDownData";
 import RevealWrapperV2 from "../animation/RevealWrapperV2";
 
 export interface ProjectsDataType {
   slug: string;
+  title: string;
+  category: string;
+  year?: number;
+  image: string;
+  alt: string;
   content: string;
-  [key: string]: any;
+  featured: boolean;
 }
 
-let projects: any[] = [
+const projects: ProjectsDataType[] = [
   {
     slug: "portfolio-redesign",
-    title: "Custom Comany Search",
-    category: "AI POWERDED RESEARCH",
-    // year: 2024,
+    title: "Custom Company Search",
+    category: "AI POWERED RESEARCH",
     image: "/images/projects/SquareTwo.png",
     alt: "Portfolio redesign preview image",
     content:
@@ -43,9 +46,6 @@ let projects: any[] = [
   },
 
 ];
-
-// let sortedProjects = projects.toSorted((a, b) => a.year - b.year);
-// console.log(sortedProjects, "hey");
 
 const ProjectItems = () => {
   return (
@@ -79,9 +79,6 @@ const ProjectItems = () => {
                   {project.title}
                 </h3>
               </div>
-              {/* <p className="text-base leading-[1.4] tracking-[0.48px] text-[#000000b3] dark:text-dark-100 md:text-2xl">
-                /{project.year}
-              </p> */}
             </div>
           </RevealWrapperV2>
         ))}
