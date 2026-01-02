@@ -8,7 +8,7 @@ export interface ProductsDataType {
 }
 
 let products: any[] = getMarkDownData('data/products')
-let sortedProducts = products.toSorted((a, b) => a.year - b.year)
+let sortedProducts = products.slice().sort((a, b) => a.year - b.year)
 
 const ProductItems = () => {
   return (
