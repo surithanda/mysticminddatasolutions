@@ -184,6 +184,9 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
     };
 
     const isLinkActive = (url: string) => {
+      if (url === "/") {
+        return pathname === "/";
+      }
       return pathname === url || pathname.startsWith(url + "/");
     };
 
@@ -199,7 +202,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
               <Link
                 href={item.url}
                 onClick={(e) => handleMenuItemClick(e, item)}
-                className="menu-list-item-text text-white
+                className={`menu-list-item-text text-white transition-colors
                   text-[18px] leading-[40px] 
                   xs:text-[20px] xs:leading-[45px]
                   sm:text-[24px] sm:leading-[50px] 
@@ -208,7 +211,8 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                   xl:text-[36px] xl:leading-[65px]
                   2xl:text-[42px] 2xl:leading-[75px]
                   3xl:text-[48px] 3xl:leading-[85px]
-                  4xl:text-[56px] 4xl:leading-[90px]"
+                  4xl:text-[56px] 4xl:leading-[90px]
+                  ${isLinkActive(item.url) ? "!text-primary font-bold" : ""}`}
               >
                 {item.title}
               </Link>
@@ -216,7 +220,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
               <a
                 href={item.url}
                 onClick={(e) => handleMenuItemClick(e, item)}
-                className="menu-list-item-text text-white cursor-pointer
+                className={`menu-list-item-text text-white cursor-pointer transition-colors
                   text-[18px] leading-[40px] 
                   xs:text-[20px] xs:leading-[45px]
                   sm:text-[24px] sm:leading-[50px] 
@@ -225,7 +229,8 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                   xl:text-[36px] xl:leading-[65px]
                   2xl:text-[42px] 2xl:leading-[75px]
                   3xl:text-[48px] 3xl:leading-[85px]
-                  4xl:text-[56px] 4xl:leading-[90px]"
+                  4xl:text-[56px] 4xl:leading-[90px]
+                  ${activeItems.includes(item.title) ? "!text-primary font-bold" : ""}`}
               >
                 {item.title}
               </a>
@@ -250,7 +255,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                       onClick={() => {
                         onItemClick && onItemClick();
                       }}
-                      className={`menu-list-item-dropdown-list inline-block pb-1 pl-3 text-white
+                      className={`menu-list-item-dropdown-list inline-block pb-1 pl-3 text-white transition-colors
                         text-[18px] leading-[40px]
                         xs:text-[20px] xs:leading-[42px]
                         sm:text-[22px] sm:leading-[44px]
@@ -260,7 +265,7 @@ export const MenuList = forwardRef<HTMLUListElement, MenuListProps>(
                         2xl:text-[30px] 2xl:leading-[56px]
                         3xl:text-[32px] 3xl:leading-[60px]
                         4xl:text-[36px] 4xl:leading-[64px]
-                        ${isLinkActive(subItem.url) ? "active" : ""}`}
+                        ${isLinkActive(subItem.url) ? "active !text-primary !font-bold" : ""}
                     >
                       {subItem.title.includes("-") ? (
                         <>

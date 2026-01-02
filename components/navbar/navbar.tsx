@@ -167,27 +167,86 @@ export default function Navbar() {
 
             {/* Desktop menu */}
             <div className="hidden lg:flex items-center gap-8 flex-1 justify-center">
-              <Link href="/" className="text-xl hover:text-blue-500">Home</Link>
-              <Link href="/about" className="text-xl hover:text-blue-500">About</Link>
+              <Link 
+                href="/" 
+                className={`text-xl hover:text-blue-500 transition-colors ${
+                  pathname === "/" ? "text-primary font-bold" : ""
+                }`}
+              >
+                Home
+              </Link>
+              <Link 
+                href="/about" 
+                className={`text-xl hover:text-blue-500 transition-colors ${
+                  pathname === "/about" ? "text-primary font-bold" : ""
+                }`}
+              >
+                About
+              </Link>
 
               <div className="relative group">
-                <Link href="#" className="text-xl flex items-center gap-1">
+                <Link 
+                  href="#" 
+                  className={`text-xl flex items-center gap-1 ${
+                    pathname.startsWith("/services") || pathname.startsWith("/data-ai-integration-services") 
+                      ? "text-primary font-bold" 
+                      : ""
+                  }`}
+                >
                   Services
                 </Link>
                 <div className="absolute top-full left-0 mt-1 w-60 bg-white dark:bg-gray-800 border rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                  <Link href="/services" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <Link 
+                    href="/services" 
+                    className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      pathname === "/services" ? "bg-gray-100 dark:bg-gray-700 font-bold text-primary" : ""
+                    }`}
+                  >
                     Main Services
                   </Link>
-                  <Link href="/data-ai-integration-services" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <Link 
+                    href="/data-ai-integration-services" 
+                    className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${
+                      pathname === "/data-ai-integration-services" ? "bg-gray-100 dark:bg-gray-700 font-bold text-primary" : ""
+                    }`}
+                  >
                     Data & AI Integration Services
                   </Link>
                 </div>
               </div>
 
-              <Link href="/products" className="text-xl hover:text-blue-500">Products</Link>
-              <Link href="/projects" className="text-xl hover:text-blue-500">Projects</Link>
-              <Link href="/blogs" className="text-xl hover:text-blue-500">Blogs</Link>
-              <Link href="/contact" className="text-xl hover:text-blue-500">Contact</Link>
+              <Link 
+                href="/products" 
+                className={`text-xl hover:text-blue-500 transition-colors ${
+                  pathname.startsWith("/products") ? "text-primary font-bold" : ""
+                }`}
+              >
+                Products
+              </Link>
+              <Link 
+                href="/projects" 
+                className={`text-xl hover:text-blue-500 transition-colors ${
+                  pathname.startsWith("/projects") ? "text-primary font-bold" : ""
+                }`}
+              >
+                Projects
+              </Link>
+              <Link 
+                href="/blogs" 
+                className={`text-xl hover:text-blue-500 transition-colors ${
+                  pathname.startsWith("/blogs") ? "text-primary font-bold" : ""
+                }`}
+              >
+                Blogs
+              </Link>
+              <Link 
+                href="/contact" 
+                className={`text-xl hover:text-blue-500 transition-colors ${
+                  pathname === "/contact" ? "text-primary font-bold" : ""
+                }`}
+              >
+                Contact
+              </Link>
             </div>
 
             {/* Mobile menu button */}
