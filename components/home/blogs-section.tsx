@@ -46,7 +46,7 @@ const Blogs: FC<BlogsProps> = ({ posts }) => {
             },
           }}>
           {posts.map((item) => (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={item.slug}>
               <div className="group relative h-auto max-w-[385px]">
                 <Link href={`/blogs-section/blog/${item.slug}`}>
                   <figure className="overflow-hidden">
