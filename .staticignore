@@ -1,0 +1,5 @@
+# Exclude large video files from static deployment
+video/
+*.mp4
+*.mov
+*.avi
